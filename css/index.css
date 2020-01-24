@@ -1,0 +1,208 @@
+@charset "utf-8";
+
+/* 기본 설정 */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+html {
+    /* font-size: 16px; */
+}
+body {
+    /* font-size: 1.4rem;
+    color: #181818;
+    background-color: #fff;
+    font-family: 'Spoqa Han Sans', 'Sans-serif';
+    font-weight: 400; */
+}
+section .inner {
+    max-width: 1172px;
+    margin: 0 auto;
+}
+
+.body-container {
+
+}
+
+
+/* BUTTON */
+
+.btn {
+    height: 34px;
+    background: #eee linear-gradient(to bottom, #fcfcfc, #eee);
+    border: 1px solid #d5d5d5;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* INPUT TEXT */
+
+.input--text {
+    height: 34px;
+    padding: 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+    font-size: 16px;
+}
+.input--text:focus {
+    border-color: #51a7e8;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075),
+                0 0 5px rgba(81,167,232,0.5);
+
+}
+.input--text::-webkit-input-placeholder { color: #cacaca; }
+.input--text::-ms-input-placeholder { color: #cacaca; }
+.input--text::-moz-input-placeholder { color: #cacaca; }
+
+/* header */
+
+header {
+    width: 100%;
+    height: 95px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ccc;
+}
+
+.header-top {
+    height: 35px;
+    background-color: #333;
+}
+.header-btm {
+
+}
+/* section-main */
+
+.section-main {
+    background-image: url('../img/KakaoMou_1280x600.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+
+.section-main .inner {
+    position: relative;
+    height: 600px;
+}
+.main-event-summary {
+    height: 145px;
+    padding: 50px 0 0 5px;
+}
+.main-event-summary .summary-title {
+    font-size: 3rem;
+    line-height: 3.8rem;
+}
+.main-event-summary .summary-description {
+    font-size: 1.18rem;
+    line-height: 2.5rem;
+}
+.main-event-summary .event-btn {
+    display: block;
+    width: 170px;
+    height: 48px;
+    border: 2px solid #000;
+    border-radius: 3px;
+    background-color: transparent;
+}
+.main-event-summary .event-btn:hover {
+    background-color: #fff;
+}
+.main-event-summary .event-more {
+    text-align: center;
+    display: block;
+    line-height: 48px;
+}
+
+.quick-booking {
+    background-color: #186686;
+    position: absolute;
+    width: 100%;
+    height: 240px;
+    bottom: 10px;
+    z-index: 98;
+
+    color: #fff;
+}
+
+.booking-tab {
+    /* border: 1px solid #fff; */
+    
+    width: 120px;
+    height: 80px;
+    text-align: center;
+}
+.on {
+    background-color: #0180a3;
+}
+.on .booking-detail {
+    display: block;
+    z-index: 99;
+}
+.booking-tab a {
+    /* border: 1px solid #fff; */
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.booking-tab h3 {
+    font-size: 0.9rem;
+}
+
+.booking-tab .icon {
+    background-image: url('../img/quick-v-tab-icon-list.png');
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 20px;
+    display: inline-block;
+    margin-top: 19px;
+}
+
+.airline-ticket {
+
+}
+.airline-ticket .icon {
+    /* border: 1px solid #fff; */
+    background-position: -198px -14px;
+}
+.airline-ticket.on .icon {
+    background-position: -2px -14px;
+}
+
+.hotel .icon {
+    background-position: -198px -84px
+}
+.hotel.on .icon {
+    background-position: -2px -84px;
+}
+
+.rentacar .icon {
+    background-position: -198px -149px;
+}
+.rentacar.on .icon {
+    background-position: -2px -149px;
+}
+
+
+
+.booking-detail {
+    /* border: 3px solid #fff; */
+    /* background-color: rgba(0,0,0,0.1); */
+    background-color: #0180a3;
+    position: absolute;
+    left: 120px;
+    top: 0;
+    width: 1052px;
+    height: 240px;
+}
