@@ -218,7 +218,7 @@ header {
 .quick-booking label,.hotel-booking-form a{
     font-size: 0.75rem;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
 }
 .quick-booking input,select{
     
@@ -260,8 +260,8 @@ button.calendar {
 button.place {
     border: 0;
     width: 18px;
-    height: 18px;
-    background: url(../img/icon-tripDetails.gif) no-repeat -19px -16px;   
+    height: 21px;
+    background: url(../img/icon-tripDetails.gif) no-repeat -18px -15px;   
 }
 .stay-nights {
     width: 40px;
@@ -282,7 +282,7 @@ button.place {
     width: 35%;
     margin-top: 15px;
 }
-.rooms-guests select {
+.quick-booking select {
     width: 100%;
     
 
@@ -300,7 +300,7 @@ button.place {
 .hotel-book-btn,.rentacar-btn {
     /* border: 1px solid #fff; */
     width: 14.1%;
-    margin-top: 36px;
+    margin-top: 34px;
 }
 #hotelBookBtn,#rentACarBtn {
     width: 100%;
@@ -315,11 +315,11 @@ button.place {
 
 /* RENT A CAR TAB */
 .rentacar-form {
-    padding: 10px 25px;
+    padding: 10px 15px 0 25px;
 }
 
 .location {
-    margin: 20px 25px 3px 25px;
+    margin: 20px 25px 5px 25px;
     width: 300px;
 }
 .international,.jeju {
@@ -369,4 +369,72 @@ button.place {
     background-color: #87c9db;
 }
 
-.
+.place-pick-up,.drop-off-pickup {
+    width: 42%;
+}
+.place-pick-up input,.drop-off-pickup input {
+    width: 93%;
+}
+
+.drop-off-pickup {
+    position: relative;
+}
+.check-another-place {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: -240px;
+    z-index: 90;
+}
+#other-place {
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: -3px 1px 0 0;
+    border: 1px solid #000;
+
+}
+.check-another-place label {
+
+}
+/* .disabled {
+    opacity: 0.5;
+} */
+.drop-off-pickup::after {
+    content: "";
+    display: block;
+    /* border: 1px solid #fff; */
+    position: absolute;
+    top: -2px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(18,129,162,0.5);
+}
+
+.skypass-member {
+    width: 13%;
+}
+
+.rental-day,.return-day {
+    width: 42%;
+    margin-top: 15px;
+}
+.rental-day .input--text,.return-day .input--text {
+    display: inline-block;
+}
+.rental-day .input--text:nth-of-type(1),.return-day .input--text:nth-of-type(1){
+    width: 50%;
+}
+.rental-day .input--text:nth-of-type(n+2),.return-day .input--text:nth-of-type(n+2){
+    width: 24%;
+}
+.rental-day input,.return-day input {
+    width: 88%;
+}
+#returnDay::placeholder,#rentalDay::placeholder {
+    color: #000;
+}
+.rentacar-btn {
+    width: 13%;
+}
