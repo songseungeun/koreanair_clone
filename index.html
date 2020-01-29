@@ -25,194 +25,191 @@
             </div>
         </header>
         <main>
-            <section class="section-main">
+            <section class="main-event">
                 <div class="inner">
-                    <div class="main-event-summary">
-                        <div class="summary-title">
-                            대한항공과 카카오의 스마트한 만남
-                        </div>
-                        <div class="summary-description">
-                            카카오 제휴 기념 할인 혜택을 확인해 보세요
-                        </div>
-                        <a href="#" class="event-btn">
-                            <div class="a11y-hidden">대한항공과 카카오의 스마트한 만남에 대해</div>
-                            <span class="event-more">자세히 보기</span>
-                            <div class="a11y-hidden">새 창 열기</div>
+                    <h2 class="a11y-hidden">메인 이벤트</h2>
+                    <h3 class="summary-title">대한항공과 카카오의 스마트한 만남</h3>
+                    <div class="summary-description">카카오 제휴 기념 할인 혜택을 확인해 보세요</div>
+                    <a href="#" class="event-btn" title="이벤트 새 창 열기">
+                        <span class="event-more">자세히 보기</span>
+                    </a>
+                </div>
+            </section>
+            <section class="quick-booking clearfix">
+                <h2 class="a11y-hidden">항공권 호텔 렌터카 빠른예약</h2>
+                <ul class="quick-booking-list">
+                    <li class="airline-ticket booking-tab">
+                        <a href="#">
+                            <span class="icon"></span>
+                            <h3>항공권</h3>
                         </a>
-                    </div>
-                    
-                        <ul class="quick-booking">
-                            <li class="airline-ticket booking-tab">
-                                <a href="#">
-                                    <span class="icon"></span>
-                                    <h3>항공권</h3>
-                                </a>
-                                
-                                <ul class="booking-detail">
-                                    <li>a</li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
-                            </li>
-                            <li class="hotel booking-tab">
-                                <a href="#">
-                                    <span class="icon"></span>
-                                    <h3>호텔</h3>
-                                </a>
+                        <div class="booking-detail">
+                            aaa
+                        </div>
+                    </li>
+                    <li class="hotel booking-tab">
+                        <a href="#">
+                            <span class="icon"></span>
+                            <h3>호텔</h3>
+                        </a>
+                        <div class="booking-detail">
+                            <form method="POST" action="#" class="hotel-booking-form">
+                                <fieldset>
+                                    <legend>호텔 예약</legend>
+                                    <ul>
+                                        <li class="hotel-destination">
+                                            <label for="hotelDestination">목적지</label>
+                                            <div class="input--text">
+                                                <input name="hotelDestination" id="hotelDestination" type="text"
+                                                    required placeholder="결제 완료 전 SKYPASS 마일리지 적립을 꼭 확인해 주세요.">
+                                            </div>
+                                        </li>
+                                        <li class="hotel-check-in">
+                                            <label for="hotelCheckIn">체크인</label>
+                                            <div class="input--text">
+                                                <input name="hotelCheckIn" id="hotelCheckIn" type="text" required
+                                                    placeholder="2020-01-25">
+                                                <button class="calendar" id="hotelCheckIn-btn"></button>
+                                            </div>
 
-                                <div class="booking-detail">
-                                    <form method="POST" action="#" class="hotel-booking-form">
-                                        <fieldset>
-                                            <legend>호텔 예약</legend>
-                                            <ul>
-                                                <li class="hotel-destination">
-                                                    <label for="hotelDestination">목적지</label>
-                                                    <div class="input--text">
-                                                        <input name="hotelDestination" id="hotelDestination" type="text" required placeholder="결제 완료 전 SKYPASS 마일리지 적립을 꼭 확인해 주세요.">
-                                                    </div>
-                                                </li>
-                                                <li class="hotel-check-in">
-                                                    <label for="hotelCheckIn">체크인</label>
-                                                    <div class="input--text">
-                                                        <input name="hotelCheckIn" id="hotelCheckIn" type="text" required placeholder="2020-01-25">
-                                                        <button class="calendar" id="hotelCheckIn-btn"></button>
-                                                    </div>
-                                                    
-                                                </li>
-                                                <li class="hotel-check-out">
-                                                    <label for="hotelCheckOut">체크아웃</label>
-                                                    <div class="input--text">
-                                                        <input name="hotelCheckOut" id="hotelCheckOut" type="text" required placeholder="2020-01-26">
-                                                        <button class="calendar" id="hotelCheckOut-btn"></button>
-                                                    </div>
-                                                    
-                                                </li>
-                                                <li class="result">
-                                                    <span class="stay-nights">1박</span>
-                                                </li>
-                                                <li class="rooms-guests">
-                                                    <label for="roomsGuests">객실/명수</label>
-                                                    <div class="input--text">
-                                                        <select name="roomsGuests" id="roomsGuests">
-                                                            <option> 1 객실 , 1 명  </option>
-                                                            <option> 1 객실 , 2 명  </option>
-                                                        </select>
-                                                    </div>
-                                                    <a href="#" class="opt">
-                                                        옵션 더 보기
-                                                        <span class="a11y-hidden">
-                                                            새 창 열기
-                                                        </span>
-                                                    </a>
-                                                </li>
-                                                <li class="hotel-book-btn">
-                                                    <button type="submit" class="hotelBookBtn" id="hotelBookBtn">예약하기</button>
-                                                </li>      
-                                            </ul>
-                                        </fieldset>
-                                    </form>
-                                </div>
-                            </li>
-                            <li class="rentacar booking-tab on">
-                                <a href="#">
-                                    <span class="icon"></span>
-                                    <h3>렌터카</h3>
-                                </a>
+                                        </li>
+                                        <li class="hotel-check-out">
+                                            <label for="hotelCheckOut">체크아웃</label>
+                                            <div class="input--text">
+                                                <input name="hotelCheckOut" id="hotelCheckOut" type="text" required
+                                                    placeholder="2020-01-26">
+                                                <button class="calendar" id="hotelCheckOut-btn"></button>
+                                            </div>
 
-                                <div class="booking-detail">
+                                        </li>
+                                        <li class="result">
+                                            <span class="stay-nights">1박</span>
+                                        </li>
+                                        <li class="rooms-guests">
+                                            <label for="roomsGuests">객실/명수</label>
+                                            <div class="input--text">
+                                                <select name="roomsGuests" id="roomsGuests">
+                                                    <option> 1 객실 , 1 명 </option>
+                                                    <option> 1 객실 , 2 명 </option>
+                                                </select>
+                                            </div>
+                                            <a href="#" class="opt" title="새 창 열기">
+                                                옵션 더 보기
+                                            </a>
+                                        </li>
+                                        <li class="hotel-book-btn">
+                                            <button type="submit" class="hotelBookBtn" id="hotelBookBtn">예약하기</button>
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </li>
+                    <li class="rentacar booking-tab on">
+                        <a href="#">
+                            <span class="icon"></span>
+                            <h3>렌터카</h3>
+                        </a>
+
+                        <div class="booking-detail">
+                            <form method="POST" action="#" class="rentacar-form">
+                                <fieldset>
+                                    <legend>렌터카 예약</legend>
+                                    <h4 class="a11y-hidden">지역 선택</h4>
                                     <div class="location clearfix">
-                                        <button class="international btn-on" aria-label="지역 선택">
-                                            <span>전세계</span>
+                                        <button class="international btn-on">
+                                            전세계
                                         </button>
                                         <button class="jeju">
                                             제주 (한진)
                                         </button>
                                     </div>
-                                    <form method="POST" action="#" class="rentacar-form">
-                                        <fieldset>
-                                            <legend>렌터카 예약</legend>
-                                            <ul>
-                                                <li class="place-pick-up">
-                                                    <label for="placePickUp">대여도시</label>
-                                                    <div class="input--text">
-                                                        <input name="placePickUp" id="placePickUp" type="text" required placeholder="도시 또는 공항 코드(3자리) 영문 입력">
-                                                        <button class="place" id="placePickUp-btn"></button>
-                                                    </div>
-                                                </li>
-                                                <li class="drop-off-pickup disabled">
-                                                    <div class="check-another-place">
-                                                        <input type="checkbox" id="other-place">
-                                                        <label for="other-place">차량을 다른 영업소로 반환합니다</label>
-                                                    </div>
-                                                    <label for="dropOffPickUp">반납도시</label>
-                                                    <div class="input--text">
-                                                        <input name="dropOffPickUp" id="dropOffPickUp" type="text" required placeholder="도시 또는 공항 코드(3자리) 영문 입력">
-                                                        <button class="place" id="dropOffPickUp-btn"></button>
-                                                    </div>
-                                                </li>
-                                                <li class="skypass-member">
-                                                    <label for="member-class">스카이패스 회원 등급</label>
-                                                    <div class="input--text">
-                                                        <select id="member-class" name="member-class">
-                                                            <option>선택</option>
-                                                            <option selected="">SKYPASS</option>
-                                                            <option>MORNING CALM</option>
-                                                            <option>MORNING CALM PREMIUM</option>
-                                                            <option>MILLION MILER</option>
-                                                        </select>
-                                                    </div>
-                                                </li>
-                                                <li class="rental-day">
-                                                    <label for="rentalDay">대여일</label>
-                                                    <div class="input--text">
-                                                        <input name="rentalDay" id="rentalDay" type="text" required placeholder="2020-01-25">
-                                                        <button class="calendar" id="rentalDay-btn"></button>
-                                                    </div>
-                                                    <div class="input--text">
-                                                        <select name="hour" id="hour">
-                                                            <option>12</option>
-                                                            <option>13</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="input--text">
-                                                        <select name="minute" id="minute">
-                                                            <option>00</option>
-                                                            <option>10</option>
-                                                        </select>
-                                                    </div>
-                                                    
-                                                </li>
-                                                <li class="return-day">
-                                                    <label for="returnDay">반납일</label>
-                                                    <div class="input--text">
-                                                        <input name="returnDay" id="returnDay" type="text" required placeholder="2020-01-26">
-                                                        <button class="calendar" id="returnDay-btn"></button>
-                                                    </div>
-                                                    <div class="input--text">
-                                                        <select name="hour" id="hour">
-                                                            <option>12</option>
-                                                            <option>13</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="input--text">
-                                                        <select name="minute" id="minute">
-                                                            <option>00</option>
-                                                            <option>10</option>
-                                                        </select>
-                                                    </div>
-                                                </li>
-                                                <li class="rentacar-btn">
-                                                    <button type="submit" class="rentACarBtn" id="rentACarBtn">예약하기</button>
-                                                </li> 
-                                </div>
-                            </li>
-                        </ul>
-                        
-                    
-                </div>
-            </section>
+                                    <ul>
+                                        <li class="place-pick-up">
+                                            <label for="placePickUp">대여도시</label>
+                                            <div class="input--text">
+                                                <input name="placePickUp" id="placePickUp" type="text" required
+                                                    placeholder="도시 또는 공항 코드(3자리) 영문 입력">
+                                                <button class="place" id="placePickUp-btn"></button>
+                                            </div>
+                                        </li>
+                                        <li class="drop-off-pickup disabled">
+                                            <div class="check-another-place">
+                                                <input type="checkbox" id="other-place">
+                                                <label for="other-place">차량을 다른 영업소로 반환합니다</label>
+                                            </div>
+                                            <label for="dropOffPickUp">반납도시</label>
+                                            <div class="input--text">
+                                                <input name="dropOffPickUp" id="dropOffPickUp" type="text" required
+                                                    placeholder="도시 또는 공항 코드(3자리) 영문 입력">
+                                                <button class="place" id="dropOffPickUp-btn"></button>
+                                            </div>
+                                        </li>
+                                        <li class="skypass-member">
+                                            <label for="member-class">스카이패스 회원 등급</label>
+                                            <div class="input--text">
+                                                <select id="member-class" name="member-class">
+                                                    <option>선택</option>
+                                                    <option selected="">SKYPASS</option>
+                                                    <option>MORNING CALM</option>
+                                                    <option>MORNING CALM PREMIUM</option>
+                                                    <option>MILLION MILER</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <li class="rental-day">
+                                            <label for="rentalDay">대여일</label>
+                                            <div class="input--text">
+                                                <input name="rentalDay" id="rentalDay" type="text" required
+                                                    placeholder="2020-01-25">
+                                                <button class="calendar" id="rentalDay-btn"></button>
+                                            </div>
+                                            <div class="input--text">
+                                                <select name="hour" id="rentalDayhour">
+                                                    <option>12</option>
+                                                    <option>13</option>
+                                                </select>
+                                            </div>
+                                            <div class="input--text">
+                                                <select name="minute" id="rentalDayminute">
+                                                    <option>00</option>
+                                                    <option>10</option>
+                                                </select>
+                                            </div>
 
-            <section></section>
+                                        </li>
+                                        <li class="return-day">
+                                            <label for="returnDay">반납일</label>
+                                            <div class="input--text">
+                                                <input name="returnDay" id="returnDay" type="text" required
+                                                    placeholder="2020-01-26">
+                                                <button class="calendar" id="returnDay-btn"></button>
+                                            </div>
+                                            <div class="input--text">
+                                                <select name="hour" id="returnDayhour">
+                                                    <option>12</option>
+                                                    <option>13</option>
+                                                </select>
+                                            </div>
+                                            <div class="input--text">
+                                                <select name="minute" id="returnDayminute">
+                                                    <option>00</option>
+                                                    <option>10</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <li class="rentacar-btn">
+                                            <button type="submit" class="rentACarBtn" id="rentACarBtn">예약하기</button>
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+
+
+            </section>
         </main>
     </div>
 </body>

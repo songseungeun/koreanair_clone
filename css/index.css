@@ -26,7 +26,7 @@ section .inner {
 
 
 /* BUTTON */
-
+/* 
 .btn {
     height: 34px;
     background: #eee linear-gradient(to bottom, #fcfcfc, #eee);
@@ -40,7 +40,7 @@ section .inner {
     line-height: 1.5;
     cursor: pointer;
     position: relative;
-}
+} */
 
 /* INPUT TEXT */
 
@@ -78,33 +78,33 @@ header {
 .header-btm {
 
 }
-/* section-main */
 
-.section-main {
+/* MAIN VISUAL */
+/* MAIN EVENT */
+
+.main-event {
     background-image: url('../img/KakaoMou_1280x600.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    
-    
 }
 
-.section-main .inner {
-    position: relative;
+.main-event .inner {
+    margin-top: 80px;
     height: 600px;
 }
-.main-event-summary {
+/* .main-event-summary {
     height: 145px;
     padding: 50px 0 0 5px;
-}
-.main-event-summary .summary-title {
+} */
+.summary-title {
     font-size: 3rem;
     line-height: 3.8rem;
 }
-.main-event-summary .summary-description {
+.summary-description {
     font-size: 1.18rem;
     line-height: 2.5rem;
 }
-.main-event-summary .event-btn {
+.event-btn {
     display: block;
     width: 170px;
     height: 48px;
@@ -112,23 +112,29 @@ header {
     border-radius: 3px;
     background-color: transparent;
 }
-.main-event-summary .event-btn:hover {
+.event-btn:hover {
     background-color: #fff;
 }
-.main-event-summary .event-more {
+.event-more {
     text-align: center;
     display: block;
     line-height: 48px;
 }
 
+/* QUICK BOOKING */
 .quick-booking {
-    background-color: #186686;
-    position: absolute;
+    position: relative;
     width: 100%;
+
+}
+
+.quick-booking-list {
+    position: absolute;
+    max-width: 1052px;
     height: 240px;
+    background-color: #186686;
     bottom: 10px;
     z-index: 98;
-
     color: #fff;
 }
 
@@ -170,25 +176,24 @@ header {
 
 }
 .airline-ticket .icon {
-    /* border: 1px solid #fff; */
     background-position: -198px -14px;
 }
 .airline-ticket.on .icon {
-    background-position: -2px -14px;
+    background-position: 2px -14px;
 }
 
 .hotel .icon {
     background-position: -198px -84px
 }
 .hotel.on .icon {
-    background-position: -2px -84px;
+    background-position: 2px -84px;
 }
 
 .rentacar .icon {
     background-position: -198px -149px;
 }
 .rentacar.on .icon {
-    background-position: -2px -149px;
+    background-position: 2px -149px;
 }
 
 
@@ -220,8 +225,8 @@ header {
     display: block;
     margin-bottom: 7px;
 }
-.quick-booking input,select{
-    
+
+.quick-booking input, .quick-booking select{
     height: 36px;
     font-size: 0.875rem;
     border: 0;
