@@ -6,14 +6,8 @@ a {
     color: inherit;
 }
 html {
-    /* font-size: 16px; */
 }
 body {
-    /* font-size: 1.4rem;
-    color: #181818;
-    background-color: #fff;
-    font-family: 'Spoqa Han Sans', 'Sans-serif';
-    font-weight: 400; */
 }
 section .inner {
     max-width: 1172px;
@@ -24,42 +18,20 @@ section .inner {
 
 }
 
-
-/* BUTTON */
-/* 
-.btn {
-    height: 34px;
-    background: #eee linear-gradient(to bottom, #fcfcfc, #eee);
-    border: 1px solid #d5d5d5;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    padding: 0 12px;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.5;
-    cursor: pointer;
-    position: relative;
-} */
-
 /* INPUT TEXT */
 
 .input--text {
     height: 40px;
     padding: 1px 5px;
-    /* border: 1px solid #ddd; */
     border-radius: 3px;
     outline: none;
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
     font-size: 16px;
     background-color: #fff;
+    vertical-align: middle;
 }
 .input--text input:focus,select:focus {
-    /* outline: 1px solid #000; */
     outline: unset;
-    /* border-color: #51a7e8;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075),
-                0 0 5px rgba(81,167,232,0.5); */
 }
 
 /* header */
@@ -90,12 +62,9 @@ header {
 
 .main-event .inner {
     margin-top: 80px;
-    height: 600px;
+    min-height: 600px;
 }
-/* .main-event-summary {
-    height: 145px;
-    padding: 50px 0 0 5px;
-} */
+
 .summary-title {
     font-size: 3rem;
     line-height: 3.8rem;
@@ -111,6 +80,7 @@ header {
     border: 2px solid #000;
     border-radius: 3px;
     background-color: transparent;
+    margin-top: 7px;
 }
 .event-btn:hover {
     background-color: #fff;
@@ -124,8 +94,8 @@ header {
 /* QUICK BOOKING */
 .quick-booking {
     position: relative;
-    width: 100%;
-
+    max-width: 1172px;
+    margin: 0 auto;
 }
 
 .quick-booking-list {
@@ -139,8 +109,6 @@ header {
 }
 
 .booking-tab {
-    /* border: 1px solid #fff; */
-    
     width: 120px;
     height: 80px;
     text-align: center;
@@ -153,7 +121,6 @@ header {
     z-index: 99;
 }
 .booking-tab a {
-    /* border: 1px solid #fff; */
     display: block;
     width: 100%;
     height: 100%;
@@ -172,9 +139,6 @@ header {
     margin-top: 19px;
 }
 
-.airline-ticket {
-
-}
 .airline-ticket .icon {
     background-position: -198px -14px;
 }
@@ -196,11 +160,7 @@ header {
     background-position: 2px -149px;
 }
 
-
-
 .booking-detail {
-    /* border: 3px solid #fff; */
-    /* background-color: rgba(0,0,0,0.1); */
     background-color: #0180a3;
     position: absolute;
     left: 120px;
@@ -211,11 +171,9 @@ header {
 }
 
 .hotel-booking-form {
-    /* border:1px solid #fff; */
     padding: 40px 25px;
 }
 .hotel-booking-form li,.rentacar-form li {
-    /* border:1px solid #fff; */
     float: left;
     margin-right: 9px;
 }
@@ -239,20 +197,20 @@ header {
 .hotel-destination label {
     
 }
-#hotelDestination {
+.hotel-destination input{
     width: 99%;
 }
-#hotelDestination::placeholder{
+.hotel-destination::placeholder{
     color: #767676;
 }
 
 .hotel-check-in,.hotel-check-out {
     width: 20%;
 }
-#hotelCheckIn,#hotelCheckOut {
+.hotel-check-in input,.hotel-check-out input{
     width: 87%;
 }
-#hotelCheckIn::placeholder,#hotelCheckOut::placeholder {
+.hotel-check-in input::placeholder,.hotel-check-out input::placeholder {
     color: #000;
 }
 
@@ -261,13 +219,18 @@ button.calendar {
     width: 18px;
     height: 18px;
     background: url(../img/icon-tripDetails.gif) no-repeat -63px -16px;
+    text-indent: -200px;
+    overflow: hidden;
 }
 button.place {
     border: 0;
     width: 18px;
     height: 21px;
-    background: url(../img/icon-tripDetails.gif) no-repeat -18px -15px;   
+    background: url(../img/icon-tripDetails.gif) no-repeat -18px -15px;
+    text-indent: -200px;
+    overflow: hidden;
 }
+
 .stay-nights {
     width: 40px;
     height: 40px;
@@ -279,7 +242,7 @@ button.place {
     border-top: 1px solid #216477;
     border-radius: 3px;
     font-size: 0.875rem;
-    margin-top: 22px;
+    margin-top: 19px;
     margin-left: 8px;
 }
 
@@ -303,11 +266,10 @@ button.place {
     text-decoration: underline;
 }
 .hotel-book-btn,.rentacar-btn {
-    /* border: 1px solid #fff; */
     width: 14.1%;
     margin-top: 34px;
 }
-#hotelBookBtn,#rentACarBtn {
+.hotel-book-btn button, .rentacar-btn button{
     width: 100%;
     height: 40px;
     font-size: 0.875rem;
@@ -324,7 +286,7 @@ button.place {
 }
 
 .location {
-    margin: 20px 25px 5px 25px;
+    margin: 10px 0px 15px 0px;
     width: 300px;
 }
 .international,.jeju {
@@ -391,7 +353,7 @@ button.place {
     right: -240px;
     z-index: 90;
 }
-#other-place {
+.check-another-place input {
     width: 20px;
     height: 20px;
     float: left;
@@ -402,13 +364,10 @@ button.place {
 .check-another-place label {
 
 }
-/* .disabled {
-    opacity: 0.5;
-} */
+
 .drop-off-pickup::after {
     content: "";
     display: block;
-    /* border: 1px solid #fff; */
     position: absolute;
     top: -2px;
     bottom: 0;
@@ -437,9 +396,7 @@ button.place {
 .rental-day input,.return-day input {
     width: 88%;
 }
-#returnDay::placeholder,#rentalDay::placeholder {
-    color: #000;
-}
+
 .rentacar-btn {
     width: 13%;
 }

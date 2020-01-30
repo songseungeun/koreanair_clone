@@ -68,8 +68,9 @@
                                             <label for="hotelCheckIn">체크인</label>
                                             <div class="input--text">
                                                 <input name="hotelCheckIn" id="hotelCheckIn" type="text" required
-                                                    placeholder="2020-01-25">
-                                                <button class="calendar" id="hotelCheckIn-btn"></button>
+                                                    value="2020-01-25">
+                                                <button class="calendar" id="hotelCheckIn-btn">날짜선택 팝업 띄우기</button>
+                                               
                                             </div>
 
                                         </li>
@@ -77,8 +78,8 @@
                                             <label for="hotelCheckOut">체크아웃</label>
                                             <div class="input--text">
                                                 <input name="hotelCheckOut" id="hotelCheckOut" type="text" required
-                                                    placeholder="2020-01-26">
-                                                <button class="calendar" id="hotelCheckOut-btn"></button>
+                                                    value="2020-01-26">
+                                                <button class="calendar" id="hotelCheckOut-btn">날짜선택 팝업 띄우기</button>
                                             </div>
 
                                         </li>
@@ -115,8 +116,8 @@
                             <form method="POST" action="#" class="rentacar-form">
                                 <fieldset>
                                     <legend>렌터카 예약</legend>
-                                    <h4 class="a11y-hidden">지역 선택</h4>
                                     <div class="location clearfix">
+                                        <h4 class="a11y-hidden">지역 선택</h4>
                                         <button class="international btn-on">
                                             전세계
                                         </button>
@@ -130,7 +131,8 @@
                                             <div class="input--text">
                                                 <input name="placePickUp" id="placePickUp" type="text" required
                                                     placeholder="도시 또는 공항 코드(3자리) 영문 입력">
-                                                <button class="place" id="placePickUp-btn"></button>
+                                                <button class="place" id="placePickUp-btn">Hertz 영업소 찾기 팝업 띄우기</button>
+                                               
                                             </div>
                                         </li>
                                         <li class="drop-off-pickup disabled">
@@ -142,7 +144,7 @@
                                             <div class="input--text">
                                                 <input name="dropOffPickUp" id="dropOffPickUp" type="text" required
                                                     placeholder="도시 또는 공항 코드(3자리) 영문 입력">
-                                                <button class="place" id="dropOffPickUp-btn"></button>
+                                                <button class="place" id="dropOffPickUp-btn">Hertz 영업소 찾기 팝업 띄우기</button>
                                             </div>
                                         </li>
                                         <li class="skypass-member">
@@ -161,17 +163,20 @@
                                             <label for="rentalDay">대여일</label>
                                             <div class="input--text">
                                                 <input name="rentalDay" id="rentalDay" type="text" required
-                                                    placeholder="2020-01-25">
-                                                <button class="calendar" id="rentalDay-btn"></button>
+                                                    value="2020-01-25" title="일자선택">
+                                                <button class="calendar" id="rentalDay-btn">날짜선택 팝업 띄우기</button>
                                             </div>
                                             <div class="input--text">
-                                                <select name="hour" id="rentalDayhour">
+                                               
+                                                <select name="hour" id="rentalDayhour" title="시간선택">
                                                     <option>12</option>
                                                     <option>13</option>
                                                 </select>
+
                                             </div>
                                             <div class="input--text">
-                                                <select name="minute" id="rentalDayminute">
+                                               
+                                                <select name="minute" id="rentalDayminute" title="분선택">
                                                     <option>00</option>
                                                     <option>10</option>
                                                 </select>
@@ -182,17 +187,17 @@
                                             <label for="returnDay">반납일</label>
                                             <div class="input--text">
                                                 <input name="returnDay" id="returnDay" type="text" required
-                                                    placeholder="2020-01-26">
-                                                <button class="calendar" id="returnDay-btn"></button>
+                                                    value="2020-01-26" title="일자선택">
+                                                <button class="calendar" id="returnDay-btn">날짜선택 팝업 띄우기</button>
                                             </div>
                                             <div class="input--text">
-                                                <select name="hour" id="returnDayhour">
+                                                <select name="hour" id="returnDayhour" title="시간선택">
                                                     <option>12</option>
                                                     <option>13</option>
                                                 </select>
                                             </div>
                                             <div class="input--text">
-                                                <select name="minute" id="returnDayminute">
+                                                <select name="minute" id="returnDayminute" title="분선택">
                                                     <option>00</option>
                                                     <option>10</option>
                                                 </select>
