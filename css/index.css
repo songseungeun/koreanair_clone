@@ -20,17 +20,22 @@ section .inner {
 
 /* INPUT TEXT */
 
-.input--text {
+.input--text input{
     height: 40px;
     padding: 1px 5px;
     border-radius: 3px;
-    outline: none;
+    /* outline: none; */
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
     font-size: 16px;
     background-color: #fff;
     vertical-align: middle;
+    border: 1px solid transparent;
 }
-.input--text input:focus,select:focus,button:focus {
+.input--text input:focus {
+    /* outline-style: solid;
+    outline-color: #000;
+    outline-width: 1px; */
+    border: 2px solid #000;
     outline: unset;
 }
 
@@ -53,7 +58,9 @@ header {
 
 /* MAIN VISUAL */
 /* MAIN EVENT */
-
+main {
+    position: relative;
+}
 .main-event {
     background-image: url('../img/KakaoMou_1280x600.jpg');
     background-repeat: no-repeat;
@@ -61,7 +68,7 @@ header {
 }
 
 .main-event .inner {
-    margin-top: 80px;
+    padding-top: 80px;
     min-height: 600px;
 }
 
@@ -93,44 +100,67 @@ header {
 
 /* QUICK BOOKING */
 .quick-booking {
+    position: absolute;
+    width: 100%;
+    height: 240px;
+    margin: 0 auto;
+    top: 348px;
+    /* background-color: red; */
+}
+
+/* QUICK BOOKING BOX */
+.airline-ticket, .hotel, .rentacar {
     position: relative;
-    max-width: 1172px;
+    width: 1172px;
+    height: 240px;
+    /* background-color: #186686; */
+    color: #fff;
     margin: 0 auto;
 }
 
-.quick-booking-list {
-    position: absolute;
-    max-width: 1052px;
-    height: 240px;
-    background-color: #186686;
-    bottom: 10px;
-    z-index: 98;
-    color: #fff;
+.airline-ticket {
+    top:0;
 }
 
+.hotel {
+    top:-240px;
+}
+
+.rentacar {
+    top:-480px;
+}
+/* TAB */
+
 .booking-tab {
+    
+}
+.airline-tab, .hotel-tab, .rentacar-tab {
+    position: absolute;
+    display: block;
     width: 120px;
     height: 80px;
     text-align: center;
-}
-.on {
-    background-color: #0180a3;
-}
-.on .booking-detail {
-    display: block;
+    background-color: #ccc;
     z-index: 99;
+    /* background-color: yellow; */
 }
-.booking-tab a {
-    display: block;
-    width: 100%;
-    height: 100%;
+.airline-tab {
+    top:0;
+}
+.hotel-tab {
+    top:80px;
+    /* background-color: blue; */
+}
+.rentacar-tab {
+    top:160px;
+    /* background-color: blueviolet; */
 }
 
 .booking-tab h3 {
     font-size: 0.9rem;
 }
 
-.booking-tab .icon {
+.tab-icon {
     background-image: url('../img/quick-v-tab-icon-list.png');
     background-repeat: no-repeat;
     width: 30px;
@@ -138,29 +168,38 @@ header {
     display: inline-block;
     margin-top: 19px;
 }
-
-.airline-ticket .icon {
+/* TAB CLICK */
+.on {
+    background-color: #0180a3;
+}
+.on .booking-detail {
+    display: block;
+    z-index: 99;
+}
+/* TAB ICON */
+.airline-ticket .tab-icon {
     background-position: -198px -14px;
 }
-.airline-ticket.on .icon {
+.airline-ticket.on .tab-icon {
     background-position: 2px -14px;
 }
 
-.hotel .icon {
+.hotel .tab-icon {
     background-position: -198px -84px
 }
-.hotel.on .icon {
+.hotel.on .tab-icon {
     background-position: 2px -84px;
 }
 
-.rentacar .icon {
+.rentacar .tab-icon {
     background-position: -198px -149px;
 }
-.rentacar.on .icon {
+.rentacar.on .tab-icon {
     background-position: 2px -149px;
 }
 
-.booking-detail {
+/*  */
+.hotel-booking-form, .rentacar-form {
     background-color: #0180a3;
     position: absolute;
     left: 120px;
@@ -168,11 +207,10 @@ header {
     width: 1052px;
     height: 240px;
     text-align: left;
-}
-
-.hotel-booking-form {
     padding: 40px 25px;
 }
+
+
 .hotel-booking-form li,.rentacar-form li {
     float: left;
     margin-right: 9px;
@@ -283,9 +321,9 @@ button.place {
 }
 
 /* RENT A CAR TAB */
-.rentacar-form {
+/* .rentacar-form {
     padding: 10px 15px 0 25px;
-}
+} */
 
 .location {
     margin: 10px 0px 15px 0px;

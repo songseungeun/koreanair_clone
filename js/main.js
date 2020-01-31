@@ -1,5 +1,5 @@
 var menu = $('.quick-booking');
-var items = $('.booking-tab');
+var items = $('.airline-ticket');
 
 items.on('click keyup focus', function(e) {
     e.preventDefault();
