@@ -99,7 +99,7 @@ main {
 }
 
 /* QUICK BOOKING */
-.quick-booking {
+.quick-booking-area {
     position: absolute;
     width: 100%;
     height: 240px;
@@ -109,11 +109,20 @@ main {
 }
 
 /* QUICK BOOKING BOX */
-.airline-ticket, .hotel, .rentacar {
+.quick-booking {
     position: relative;
     width: 1172px;
     height: 240px;
-    /* background-color: #186686; */
+    background-color: #186686;
+    color: #fff;
+    margin: 0 auto;
+}
+
+/* .airline-ticket, .hotel, .rentacar {
+    position: relative;
+    width: 1172px;
+    height: 240px;
+    background-color: #186686;
     color: #fff;
     margin: 0 auto;
 }
@@ -128,46 +137,39 @@ main {
 
 .rentacar {
     top:-480px;
-}
+} */
+
 /* TAB */
 
-.booking-tab {
-    
+.quick-booking-tab {
+    width: 120px;
 }
 .airline-tab, .hotel-tab, .rentacar-tab {
-    position: absolute;
     display: block;
     width: 120px;
     height: 80px;
+    border-bottom: 1px solid #fff;
+    padding: 15px 0;
     text-align: center;
-    background-color: #ccc;
-    z-index: 99;
-    /* background-color: yellow; */
 }
+.rentacar-tab {
+    border-bottom: 1px solid transparent;
+}
+/* 
 .airline-tab {
     top:0;
 }
 .hotel-tab {
     top:80px;
-    /* background-color: blue; */
 }
 .rentacar-tab {
     top:160px;
-    /* background-color: blueviolet; */
-}
+} */
 
-.booking-tab h3 {
+.quick-booking-tab h2 {
     font-size: 0.9rem;
 }
 
-.tab-icon {
-    background-image: url('../img/quick-v-tab-icon-list.png');
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 20px;
-    display: inline-block;
-    margin-top: 19px;
-}
 /* TAB CLICK */
 .on {
     background-color: #0180a3;
@@ -176,31 +178,41 @@ main {
     display: block;
     z-index: 99;
 }
+
 /* TAB ICON */
-.airline-ticket .tab-icon {
+
+.tab-icon {
+    background-image: url('../img/quick-v-tab-icon-list.png');
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 20px;
+    display: inline-block;
+}
+
+.airline-tab .tab-icon {
     background-position: -198px -14px;
 }
-.airline-ticket.on .tab-icon {
+.airline-tab.on .tab-icon {
     background-position: 2px -14px;
 }
 
-.hotel .tab-icon {
+.hotel-tab .tab-icon {
     background-position: -198px -84px
 }
-.hotel.on .tab-icon {
+.hotel-tab.on .tab-icon {
     background-position: 2px -84px;
 }
 
-.rentacar .tab-icon {
+.rentacar-tab .tab-icon {
     background-position: -198px -149px;
 }
-.rentacar.on .tab-icon {
+.rentacar-tab.on .tab-icon {
     background-position: 2px -149px;
 }
 
 /*  */
 .hotel-booking-form, .rentacar-form {
-    background-color: #0180a3;
+    /* background-color: #0180a3; */
     position: absolute;
     left: 120px;
     top: 0;
