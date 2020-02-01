@@ -20,23 +20,37 @@ section .inner {
 
 /* INPUT TEXT */
 
-.input--text input{
-    height: 40px;
-    padding: 1px 5px;
+.input--text, .input--select{
+    height: 42px;
+    padding: 1px 10px;
     border-radius: 3px;
-    /* outline: none; */
+    outline: none;
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
     font-size: 16px;
     background-color: #fff;
     vertical-align: middle;
     border: 1px solid transparent;
+    font-size: 0.875rem;
+    border: 0;   
+    width: 100%; 
 }
-.input--text input:focus {
+
+.input--select {
+    background-image: url(../img/select-arrow-fallback-ln.png);
+    background-repeat: no-repeat;
+    background-position: 99% 50%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+         appearance: none;
+}
+
+.input--text:focus, .input--select:focus {
     /* outline-style: solid;
     outline-color: #000;
     outline-width: 1px; */
-    border: 2px solid #000;
-    outline: unset;
+    /* border: 2px solid #000; */
+    /* outline: 2px solid #000; */
+    box-shadow: 0 0 0 2px #000;
 }
 
 /* header */
@@ -144,38 +158,30 @@ main {
 .quick-booking-tab {
     width: 120px;
 }
-.airline-tab, .hotel-tab, .rentacar-tab {
+.quick-booking-tab li a {
     display: block;
     width: 120px;
     height: 80px;
-    border-bottom: 1px solid #fff;
-    padding: 15px 0;
+    border-bottom: 1px solid #0180a3;
+    padding: 19px 0;
     text-align: center;
 }
 .rentacar-tab {
     border-bottom: 1px solid transparent;
 }
-/* 
-.airline-tab {
-    top:0;
-}
-.hotel-tab {
-    top:80px;
-}
-.rentacar-tab {
-    top:160px;
-} */
 
 .quick-booking-tab h2 {
     font-size: 0.9rem;
+    height: 18px;
+    line-height: 18px;
 }
 
 /* TAB CLICK */
 .on {
     background-color: #0180a3;
 }
-.on .booking-detail {
-    display: block;
+
+.detail-view {
     z-index: 99;
 }
 
@@ -210,79 +216,99 @@ main {
     background-position: 2px -149px;
 }
 
-/*  */
-.hotel-booking-form, .rentacar-form {
-    /* background-color: #0180a3; */
+/* SECTION BOOKING DETAIL */
+
+.quick-booking section {
+    background-color: #0180a3;
+    /* background-color: yellow; */
     position: absolute;
     left: 120px;
     top: 0;
     width: 1052px;
     height: 240px;
-    text-align: left;
-    padding: 40px 25px;
+    /* text-align: left; */
+    /* padding: 40px 25px; */
 }
 
+section.hotel {
+    padding: 40px 25px; 
+}
+section.rentacar {
+    padding: 20px 25px;
+}
 
-.hotel-booking-form li,.rentacar-form li {
+.hotel-detail li,.rentacar-detail li {
     float: left;
     margin-right: 9px;
+    position: relative;
 }
 
-.quick-booking label,.hotel-booking-form a{
+.quick-booking label,.more-opt{
     font-size: 0.75rem;
     display: block;
     margin-bottom: 7px;
 }
 
-.quick-booking input, .quick-booking select{
-    height: 36px;
-    font-size: 0.875rem;
-    border: 0;
-    padding: 2px 0 2px 7px;
-}
+/* HOTEL */
 
+/* size */
 .hotel-destination {
     width: 50%;
 }
-.hotel-destination label {
-    
+.hotel-check-in,.hotel-check-out {
+    width: 20%;
 }
-.hotel-destination input{
-    width: 99%;
+.rooms-guests {
+    width: 35%;
+    margin-top: 15px;
 }
+
+/* input text font color */
 .hotel-destination::placeholder{
     color: #767676;
 }
 
-.hotel-check-in,.hotel-check-out {
-    width: 20%;
-}
-.hotel-check-in input,.hotel-check-out input{
-    width: 87%;
-}
-.hotel-check-in input::placeholder,.hotel-check-out input::placeholder {
-    color: #000;
+/* input > button icon */
+button.calendar{
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    right: 10px;
 }
 
 button.calendar {
     border: 0;
-    width: 18px;
-    height: 36px;
-    background: url(../img/icon-tripDetails.gif) no-repeat -63px -8px;
+    width: 20px;
+    height: 20px;
+    background: url(../img/icon-tripDetails.gif) no-repeat -61px -15px;
     text-indent: -200px;
     overflow: hidden;
     cursor: pointer;
+    padding: 0;
+    outline: none;
 }
-button.place {
-    border: 0;
-    width: 18px;
-    height: 36px;
-    background: url(../img/icon-tripDetails.gif) no-repeat -18px -10px;
-    text-indent: -200px;
-    overflow: hidden;
-    cursor: pointer;
+button.calendar:focus {
+    box-shadow: 0 0 0 2px #000;
 }
 
+button.place {
+    border: 0;
+    width: 20px;
+    height: 21px;
+    background: url(../img/icon-tripDetails.gif) no-repeat -18px -15px;
+    text-indent: -200px;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    right: 10px;
+}
+
+/* Stay result */
 .stay-nights {
     width: 40px;
     height: 40px;
@@ -298,38 +324,29 @@ button.place {
     margin-left: 8px;
 }
 
-.rooms-guests {
-    width: 35%;
-    margin-top: 15px;
-}
-.quick-booking select {
-    width: 100%;
-    
-
-    background: url(../img/select-arrow-fallback-ln.png) no-repeat 100% 40%;  
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-}
-.rooms-guests a.opt {
+.more-opt {
     margin-top: 10px;
     margin-bottom: 0;
     display: block;
     text-decoration: underline;
 }
+
+/* BOOKING BUTTON */
 .hotel-book-btn,.rentacar-btn {
     width: 14.1%;
-    margin-top: 34px;
+    margin-top: 33px;
 }
-.hotel-book-btn button, .rentacar-btn button{
+
+.hotelBookBtn, .rentACarBtn{
     width: 100%;
-    height: 40px;
+    height: 43px;
     font-size: 0.875rem;
     border-radius: 3px;
     border: 1px solid #136186;
     background: #a0e2f4;
     color: #265866;
     box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    padding: 0;
 }
 
 /* RENT A CAR TAB */
@@ -338,8 +355,7 @@ button.place {
 } */
 
 .location {
-    margin: 10px 0px 15px 0px;
-    width: 300px;
+    margin-bottom: 15px;
 }
 .international,.jeju {
     width: 117px;
@@ -391,30 +407,21 @@ button.place {
 .place-pick-up,.drop-off-pickup {
     width: 42%;
 }
-.place-pick-up input,.drop-off-pickup input {
-    width: 93%;
-}
 
-.drop-off-pickup {
-    position: relative;
-}
 .check-another-place {
     position: absolute;
-    width: 100%;
     top: 0;
-    right: -240px;
+    right: 0;
     z-index: 90;
+    width: 190px;
 }
-.check-another-place input {
+
+.check-another-place input[type="checkbox"] {
     width: 20px;
     height: 20px;
     float: left;
-    margin: -3px 1px 0 0;
     border: 1px solid #000;
-
-}
-.check-another-place label {
-
+    margin-top: -3px;
 }
 
 .drop-off-pickup::after {
@@ -436,13 +443,14 @@ button.place {
     width: 42%;
     margin-top: 15px;
 }
+
 .rental-day .input--text,.return-day .input--text {
     display: inline-block;
 }
-.rental-day .input--text:nth-of-type(1),.return-day .input--text:nth-of-type(1){
+.rental-day input.input--text,.return-day input.input--text{
     width: 50%;
 }
-.rental-day .input--text:nth-of-type(n+2),.return-day .input--text:nth-of-type(n+2){
+.rental-day .input--select,.return-day .input--select{
     width: 24%;
 }
 .rental-day input,.return-day input {

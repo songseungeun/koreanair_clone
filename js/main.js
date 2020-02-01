@@ -1,5 +1,5 @@
-var menu = $('.quick-booking');
-var items = $('.airline-ticket');
+let menu = $('.quick-booking');
+let items = $('.airline-tab, .hotel-tab, .rentacar-tab');
 
 items.on('click keyup focus', function(e) {
     e.preventDefault();
@@ -8,3 +8,13 @@ items.on('click keyup focus', function(e) {
         $(this).addClass('on');
     }
 });
+
+
+let tabs = $('.quick-booking-tab [role="tab"]')
+
+tabs.on('click', function (e) {
+    e.preventDefault();
+    $(this).attr('aria-selected', true).siblings().attr('aria-selected', false);
+    let selectedId = "#"+$(this).attr('aria-controls');
+    $(selectedId).addClass('detail-view').siblings().removeClass('detail-view');
+})
