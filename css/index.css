@@ -1,6 +1,7 @@
 @charset "utf-8";
 
-/* 기본 설정 */
+/* BASIC */
+
 a {
     text-decoration: none;
     color: inherit;
@@ -13,12 +14,11 @@ section .inner {
     max-width: 1172px;
     margin: 0 auto;
 }
-
 .body-container {
 
 }
 
-/* INPUT TEXT */
+/* INPUT TEXT, SELECT style */
 
 .input--text, .input--select{
     height: 42px;
@@ -34,7 +34,6 @@ section .inner {
     border: 0;   
     width: 100%; 
 }
-
 .input--select {
     background-image: url(../img/select-arrow-fallback-ln.png);
     background-repeat: no-repeat;
@@ -44,13 +43,55 @@ section .inner {
          appearance: none;
 }
 
-.input--text:focus, .input--select:focus {
-    /* outline-style: solid;
-    outline-color: #000;
-    outline-width: 1px; */
-    /* border: 2px solid #000; */
-    /* outline: 2px solid #000; */
+/* input > button icon */
+button.calendar, button.place {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    border: 0;
+    width: 20px;
+    height: 21px;
+    margin-top: -2px;
+    text-indent: -200px;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 0;
+}
+button.calendar {
+    background: url(../img/icon-tripDetails.gif) no-repeat -61px -15px; 
+}
+button.place {
+    background: url(../img/icon-tripDetails.gif) no-repeat -16px -15px;
+}
+
+.rentacar-detail button.calendar {
+    right: 220px;
+}
+
+/* form focus style */
+button {
+    outline: none;
+}
+.input--text:focus, .input--select:focus, button:focus{
     box-shadow: 0 0 0 2px #000;
+}
+
+/* BOOKING BUTTON */
+.hotel-book-btn,.rentacar-btn {
+    width: 14.1%;
+    margin-top: 33px;
+}
+
+.hotelBookBtn, .rentACarBtn{
+    width: 100%;
+    height: 43px;
+    font-size: 0.875rem;
+    border-radius: 3px;
+    border: 1px solid #136186;
+    background: #a0e2f4;
+    color: #265866;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    padding: 0;
 }
 
 /* header */
@@ -102,15 +143,20 @@ main {
     border-radius: 3px;
     background-color: transparent;
     margin-top: 7px;
+    outline: none;
 }
-.event-btn:hover {
-    background-color: #fff;
+.event-btn:focus, .event-btn:hover {
+    background-color: rgba(255,255,255,.7);
+    border: 2px solid #0180a3;
+    color: #0180a3;
 }
+
 .event-more {
     text-align: center;
     display: block;
     line-height: 48px;
 }
+
 
 /* QUICK BOOKING */
 .quick-booking-area {
@@ -119,7 +165,6 @@ main {
     height: 240px;
     margin: 0 auto;
     top: 348px;
-    /* background-color: red; */
 }
 
 /* QUICK BOOKING BOX */
@@ -130,28 +175,9 @@ main {
     background-color: #186686;
     color: #fff;
     margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
 }
-
-/* .airline-ticket, .hotel, .rentacar {
-    position: relative;
-    width: 1172px;
-    height: 240px;
-    background-color: #186686;
-    color: #fff;
-    margin: 0 auto;
-}
-
-.airline-ticket {
-    top:0;
-}
-
-.hotel {
-    top:-240px;
-}
-
-.rentacar {
-    top:-480px;
-} */
 
 /* TAB */
 
@@ -165,8 +191,9 @@ main {
     border-bottom: 1px solid #0180a3;
     padding: 19px 0;
     text-align: center;
+    outline: none;
 }
-.rentacar-tab {
+.quick-booking-tab li:last-of-type a {
     border-bottom: 1px solid transparent;
 }
 
@@ -216,18 +243,15 @@ main {
     background-position: 2px -149px;
 }
 
-/* SECTION BOOKING DETAIL */
+/* SECTION BOOKING */
 
 .quick-booking section {
     background-color: #0180a3;
-    /* background-color: yellow; */
     position: absolute;
     left: 120px;
     top: 0;
     width: 1052px;
     height: 240px;
-    /* text-align: left; */
-    /* padding: 40px 25px; */
 }
 
 section.hotel {
@@ -268,46 +292,6 @@ section.rentacar {
     color: #767676;
 }
 
-/* input > button icon */
-button.calendar{
-    position: absolute;
-    top: 50%;
-    margin-top: -2px;
-    right: 10px;
-}
-
-button.calendar {
-    border: 0;
-    width: 20px;
-    height: 20px;
-    background: url(../img/icon-tripDetails.gif) no-repeat -61px -15px;
-    text-indent: -200px;
-    overflow: hidden;
-    cursor: pointer;
-    padding: 0;
-    outline: none;
-}
-button.calendar:focus {
-    box-shadow: 0 0 0 2px #000;
-}
-
-button.place {
-    border: 0;
-    width: 20px;
-    height: 21px;
-    background: url(../img/icon-tripDetails.gif) no-repeat -18px -15px;
-    text-indent: -200px;
-    overflow: hidden;
-    cursor: pointer;
-    padding: 0;
-    outline: none;
-
-    position: absolute;
-    top: 50%;
-    margin-top: -2px;
-    right: 10px;
-}
-
 /* Stay result */
 .stay-nights {
     width: 40px;
@@ -331,28 +315,7 @@ button.place {
     text-decoration: underline;
 }
 
-/* BOOKING BUTTON */
-.hotel-book-btn,.rentacar-btn {
-    width: 14.1%;
-    margin-top: 33px;
-}
-
-.hotelBookBtn, .rentACarBtn{
-    width: 100%;
-    height: 43px;
-    font-size: 0.875rem;
-    border-radius: 3px;
-    border: 1px solid #136186;
-    background: #a0e2f4;
-    color: #265866;
-    box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
-    padding: 0;
-}
-
-/* RENT A CAR TAB */
-/* .rentacar-form {
-    padding: 10px 15px 0 25px;
-} */
+/* RENT A CAR LOCATION TAB */
 
 .location {
     margin-bottom: 15px;
@@ -368,7 +331,6 @@ button.place {
     cursor: pointer;
     font-size: 0.8rem;
     color: #fff;
-
 }
 .international {
     margin-left: 10px;
@@ -404,48 +366,16 @@ button.place {
     background-color: #87c9db;
 }
 
+/* rent a car li size */
 .place-pick-up,.drop-off-pickup {
     width: 42%;
 }
-
-.check-another-place {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 90;
-    width: 190px;
-}
-
-.check-another-place input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    float: left;
-    border: 1px solid #000;
-    margin-top: -3px;
-}
-
-.drop-off-pickup::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: -2px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(18,129,162,0.5);
-}
-
 .skypass-member {
     width: 13%;
 }
-
 .rental-day,.return-day {
     width: 42%;
     margin-top: 15px;
-}
-
-.rental-day .input--text,.return-day .input--text {
-    display: inline-block;
 }
 .rental-day input.input--text,.return-day input.input--text{
     width: 50%;
@@ -456,7 +386,33 @@ button.place {
 .rental-day input,.return-day input {
     width: 88%;
 }
-
 .rentacar-btn {
     width: 13%;
+}
+
+
+/* check box */
+.check-another-place {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 90;
+    width: 190px;
+}
+.check-another-place input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    float: left;
+    border: 1px solid #000;
+    margin-top: -3px;
+}
+.drop-off-pickup::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -2px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(18,129,162,0.5);
 }

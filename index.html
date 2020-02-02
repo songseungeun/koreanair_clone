@@ -42,19 +42,19 @@
                 <div class="quick-booking">
                     <ul class="quick-booking-tab" role="tablist">
                         <li class="airline-tab on" role="tab" id="airlineTab" aria-controls="airline-tabpanel" aria-selected="true" tabindex="0">
-                            <a href="#" title="항공권 빠른예매 보기">
+                            <a href="#" title="항공권 빠른예매 보기" tabindex="-1">
                                 <span class="tab-icon"></span>
                                 <h2>항공권</h2>
                             </a>
                         </li>
                         <li class="hotel-tab" role="tab" id="hotelTab" aria-controls="hotel-tabpanel" aria-selected="false" tabindex="0">
-                            <a href="#" title="호텔 빠른예매 보기">
+                            <a href="#" title="호텔 빠른예매 보기" tabindex="-1">
                                 <span class="tab-icon"></span>
                                 <h2>호텔</h2>
                             </a>
                         </li>
                         <li class="rentacar-tab" role="tab" id="rentacarTab" aria-controls="rentacar-tabpanel" aria-selected="false" tabindex="0">
-                            <a href="#" title="렌터카 빠른예매 보기">
+                            <a href="#" title="렌터카 빠른예매 보기" tabindex="-1">
                                 <span class="tab-icon"></span>
                                 <h2>렌터카</h2>
                             </a>
@@ -115,18 +115,20 @@
                        
                     </section>
                     <section class="rentacar" role="tabpanel" id="rentacar-tabpanel" aria-labelledby="rentacarTab">
+                        <!-- form 안에 넣었더니 버튼을 클릭할 때 input을 입력하라는 경고창이 떠서 마크업 수정 -->
+                        <div class="location clearfix">
+                            <h4 class="a11y-hidden">렌터카 지역 선택</h4>
+                            <button class="international btn-on">
+                                전세계
+                            </button>
+                            <button class="jeju">
+                                제주 (한진)
+                            </button>
+                        </div>
                         <form method="POST" action="#" class="rentacar-form">
                             <fieldset>
                                 <legend>렌터카 예약</legend>
-                                <div class="location clearfix">
-                                    <h4 class="a11y-hidden">지역 선택</h4>
-                                    <button class="international btn-on">
-                                        전세계
-                                    </button>
-                                    <button class="jeju">
-                                        제주 (한진)
-                                    </button>
-                                </div>
+                                
                                 <ul class="rentacar-detail">
                                     <li class="place-pick-up">
                                         <label for="placePickUp">대여도시</label>
