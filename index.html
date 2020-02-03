@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
     <link rel="stylesheet" href="./css/module.css">
     <link rel="stylesheet" href="./css/index.css">
+    <!-- <link rel="stylesheet" href="./test/tab.css"> -->
 
     <script src="./js/jquery.min.js" defer></script>
     <script src="./js/main.js" defer></script>
+    <script src="./test/main.js" defer></script>
 </head>
 <body>
     <div class="body-container">
@@ -61,14 +63,226 @@
                         </li>
                     </ul>
                     <section class="airline-ticket detail-view" role="tabpanel" id="airline-tabpanel" class="detail-view" aria-labelledby="airlineTab">
-                        <article class="airline-booking">
-                            <h3>예매</h3>
+                        <article class="ticket menu-act">
+                            <div class="form-container">
+                                <h3>예매</h3>
+                                <div class="airline-book btn-grp">
+                                    <button class="btn-normal btn-on">
+                                        <span>일반예매</span>
+                                    </button>
+                                    <button class="btn-bonus">
+                                        <span>보너스예매</span>
+                                    </button>
+                                </div>
+                                <form action="" method="POST" class="ticket-form">
+                                    <fieldset>
+                                        <legend>항공권 예매</legend>
+                                        <ul class="ticket-item clearfix">
+                                            <li class="trip-type-option">
+                                                <input type="radio" id="one-way-ticket" name="flight-ticket"
+                                                    value="one-way-ticket">
+                                                <label for="one-way-ticket">편도</label>
+                                                <input type="radio" id="round-trip-ticket" name="flight-ticket"
+                                                    value="one-way-ticket">
+                                                <label for="round-trip-ticket">왕복</label>
+                                                <a href="#" class="multi-city">다구간</a>
+                                                <a href="#" class="quick-help" title="다구간 상세설명">다구간 상세설명</a>
+                                            </li>
+                                            <li class="departure-airport">
+                                                <label for="departure-airport-input" class="a11y-hidden">출발지</label>
+                                                <input type="text" name="departure-airport-input"
+                                                    id="departure-airport-input" placeholder="출발지" class="input--text input--text--left">
+                                                <button class="place">출발지 선택버튼</button>
+                                            </li>
+                                            <li class="arrival-airport">
+                                                <label for="arrival-airport-input" class="a11y-hidden">목적지</label>
+                                                <input type="text" name="arrival-airport-input"
+                                                    id="arrival-airport-input" placeholder="목적지" class="input--text input--text--center">
+                                                <button class="place">목적지 선택버튼</button>
+                                            </li>
+                                            <li class="trip-date">
+                                                <label for="trip-date-input" class="a11y-hidden">가는 날/오는 날</label>
+                                                <input type="text" name="trip-date-input" id="trip-date-input"
+                                                    placeholder="가는 날/오는 날" class="input--text input--text--right">
+                                                <button class="calendar">가는날/오는날 선택버튼</button>
+                                            </li>
+                                            <li class="passenger passenger-count-adult">
+                                                <label for="adult-count">성인</label>
+                                                <div class="passenger-count-container">
+                                                    <button class="dec-btn btn-hide">성인 탑승자 한 명 줄이기</button>
+                                                    <input type="text" class="input-passenger-count" name="adult-count"
+                                                        id="adult-count" value="0">
+                                                    <button class="inc-btn btn-hide">성인 탑승자 한 명 늘이기</button>
+                                                </div>
+                                            </li>
+                                            <li class="passenger passenger-count-child">
+                                                <label for="child-count">소아</label>
+                                                <div class="passenger-count-container">
+                                                    <button class="dec-btn btn-hide">소아 탑승자 한 명 줄이기</button>
+                                                    <input type="text" class="input-passenger-count" name="child-count"
+                                                        id="child-count" value="0">
+                                                    <button class="inc-btn btn-hide">소아 탑승자 한 명 늘이기</button>
+                                                </div>
+                                                <a href="#" class="child-more-info btn-hide">소아 상세안내</a>
+                                            </li>
+                                            <li class="passenger passenger-count-infant">
+                                                <label for="infant-count">유아</label>
+                                                <div class="passenger-count-container">
+                                                    <button class="dec-btn btn-hide">유아 탑승자 한 명 줄이기</button>
+                                                    <input type="text" class="input-passenger-count" name="infant-count"
+                                                        id="infant-count" value="0">
+                                                    <button class="inc-btn btn-hide">유아 탑승자 한 명 늘이기</button>
+                                                </div>
+                                                <a href="#" class="infant-more-info btn-hide">유아 상세안내</a>
+                                            </li>
+                                            <li class="cabin-class">
+                                                <label for="cabin-class-select">좌석등급</label>
+                                                <select name="cabin-class-select" id="cabin-class-select"
+                                                    class="input--select">
+                                                    <option value="cabin-class-economy">일반석</option>
+                                                    <option value="cabin-class-prestige">프레스티지</option>
+                                                    <option value="cabin-class-first">일등석</option>
+                                                </select>
+                                            </li>
+
+                                            <!-- 추가옵션 영역 다시 손보기 -->
+                                            <li class="additional-option">
+                                                <label for="additional-option-select">추가옵션</label>
+                                                <select name="additional-option-select" id="additional-option-select">
+                                                    <option value="option1">옵션1</option>
+                                                </select>
+                                                <a href="#" class="option-more-info btn-hide">추가옵션 상세안내</a>
+                                            </li>
+                                            <li class="airline-book-btn">
+                                                <button class="airlineBookBtn">항공편 조회</button>
+                                            </li>
+                                        </ul>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div class="menu-icon-container">
+                                <span class="menu-icon">예매</span>
+                            </div>
                         </article>
-                        <article class="airline-check-in">
-                            <h3>체크인</h3>
+                        <!-- 체크인 article -->
+                        <article class="checkin">
+                            <div class="form-container">
+                                <h4>체크인</h4>
+                                <form action="https://" class="checkin-form" method="POST">
+                                    <fieldset>
+                                        <legend>체크인</legend>
+                                        <ul class="checkin-item clearfix">
+                                            <li>
+                                                <label for="checkin-number">예약 번호 또는 항공권 번호</label>
+                                                <input type="text" id="checkin-number" class="input--text"
+                                                    placeholder="예약 번호 또는 항공권 번호">
+                                                <a href="#" class="number-more-info btn-hide">예약 번호 또는 항공권 번호 상세안내</a>
+                                            </li>
+                                            <li>
+                                                <label for="checkin-lastname">승객 성(영문 성 입력)</label>
+                                                <input type="text" id="checkin-lastname" class="input--text"
+                                                    placeholder="국내선 한글 예약의 경우 한글 성 입력">
+                                            </li>
+                                            <li>
+                                                <label for="checkin-date">출발일</label>
+                                                <select name="checkin-date" id="checkin-date" class="input--select">
+                                                    <option value="2020-02-01">2020-02-01</option>
+                                                    <option value="2020-02-02">2020-02-02</option>
+                                                    <option value="2020-02-03">2020-02-03</option>
+                                                    <option value="2020-02-04">2020-02-04</option>
+                                                    <option value="2020-02-05">2020-02-05</option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <label for="checkin-firstname">승객 이름(영문 이름 입력)</label>
+                                                <input type="text" id="checkin-firstname" class="input--text"
+                                                    placeholder="국내선 한글 예약의 경우 한글 이름 입력">
+                                            </li>
+                                            <li class="validation-check-container">
+                                                <input type="checkbox" name="validation-check" id="validation-check">
+                                                <label for="validation-check">
+                                                    본인은 상기 예약의 탑승자이자 신원 확인에 필요한 제반 서류의 정당한 소지인입니다.
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <button class="checkin-button">계속</button>
+                                            </li>
+                                        </ul>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div class="menu-icon-container">
+                                <span class="menu-icon">체크인</span>
+                            </div>
                         </article>
-                        <article class="airline-schedule">
-                            <h3>출도착/스케줄</h3>
+
+                        <!-- 출도착 및 스케줄 article -->
+                        <article class="flight-status-schedule">
+                            <div class="form-container">
+                                <h3>출도착/스케줄</h3>
+                                <!-- btn-on으로 다시 디자인 바꿔야함 -->
+                                <div class="btn-grp">
+                                    <button class="btn-normal btn btn-on">
+                                        <span>스케줄 조회</span>
+                                    </button>
+                                    <button class="btn-bonus btn">
+                                        <span>출도착 조회</span>
+                                    </button>
+                                </div>
+                                <form action="" class="schedule-form" method="POST">
+                                    <fieldset>
+                                        <legend>스케줄조회</legend>
+                                        <div class="schedule-trip-type">
+                                            <input type="radio" name="schedule-one-way" id="schedule-one-way">
+                                            <label for="schedule-one-way">편도</label>
+                                            <input type="radio" name="schedule-roundtrip" id="schedule-roundtrip">
+                                            <label for="schedule-roundtrip">왕복</label>
+                                        </div>
+                                        <ul class="schedule-item clearfix">
+                                            <li class="departure-airport">
+                                                <label for="departure-airport-input" class="a11y-hidden">
+                                                    출발지
+                                                </label>
+                                                    <input type="text" name="departure-airport-input"
+                                                        id="departure-airport-input" placeholder="출발지" class="input--text input--text--left">
+                                                    <button class="place">출발지 선택버튼</button>
+                                            </li>
+                                            <li class="arrival-airport">
+                                                <label for="arrival-airport-input" class="a11y-hidden">
+                                                    목적지
+                                                </label>
+                                                    <input type="text" name="arrival-airport-input"
+                                                        id="arrival-airport-input" placeholder="목적지" class="input--text input--text--center">
+                                                    <button class="place">목적지 선택버튼</button>
+                                            </li>
+                                            <li class="trip-date">
+                                                <label for="trip-date-input" class="a11y-hidden">
+                                                    가는 날/오는 날
+                                                </label>
+                                                    <input type="text" name="trip-date-input" id="trip-date-input"
+                                                        placeholder="가는 날/오는 날" class="input--text input--text--right">
+                                                    <button class="calendar">가는날/오는날 선택버튼</button>
+                                            </li>
+                                            <li class="notice-list">
+                                                <span class="a11y-hidden">유의사항</span>
+                                                <ul>
+                                                    <li>운항 편명 및 출발일자가 변경된 경우, <mark>'최초 스케줄상의 운항 편명과 출발일자'</mark>로 조회하시기
+                                                        바랍니다.</li>
+                                                    <li>운항 스케줄을 조회하기 위해서는 <a href="#">스케줄 조회 메뉴</a>를 이용하시기 바랍니다.</li>
+                                                    <li>별도 날짜를 지정하지 않으신 경우 금일 기준의 스케줄이 조회됩니다.</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <button class="schedule-button">조회하기</button>
+                                            </li>
+                                        </ul>
+
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div class="menu-icon-container">
+                                <span class="menu-icon">출도착/스케줄</span>
+                            </div>
                         </article>
                     </section>
                     <section class="hotel" role="tabpanel" id="hotel-tabpanel" aria-labelledby="hotelTab">
@@ -116,12 +330,12 @@
                     </section>
                     <section class="rentacar" role="tabpanel" id="rentacar-tabpanel" aria-labelledby="rentacarTab">
                         <!-- form 안에 넣었더니 버튼을 클릭할 때 input을 입력하라는 경고창이 떠서 마크업 수정 -->
-                        <div class="location clearfix">
+                        <div class="location btn-grp clearfix">
                             <h4 class="a11y-hidden">렌터카 지역 선택</h4>
                             <button class="international btn-on">
                                 전세계
                             </button>
-                            <button class="jeju">
+                            <button class="jeju btn">
                                 제주 (한진)
                             </button>
                         </div>
