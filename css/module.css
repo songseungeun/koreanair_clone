@@ -1,5 +1,3 @@
-@charset "utf-8";
-
 /* 기본 박스 사이징 재설정 (width에 border-width와 padding을 포함하여 계산) */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -31,32 +29,16 @@
     clip-path: polygon(0 0, 0 0, 0 0);
 }
 
-/* 기본 설정 */
-a {
-    text-decoration: none;
-    color: inherit;
+
+/* 버튼 bg주고 글자날리기 */
+.btn-hide {
+  display: inline-block;
+  margin: 0;
+  border: none;
+  width: 15px;
+  height: 0;
+  padding-top: 15px;
+  overflow: hidden; 
+  vertical-align: middle;
+  font-size: 5rem;
 }
-
-section .inner {
-    max-width: 1172px;
-    margin: 0 auto;
-}
-
-/* header */
-
-header {
-    width: 100%;
-    height: 95px;
-    background-color: #f4f4f4;
-    border-bottom: 1px solid #ccc;
-}
-
-.header-top {
-    height: 35px;
-    background-color: #333;
-}
-.header-btm {
-
-}
-
-/*  */

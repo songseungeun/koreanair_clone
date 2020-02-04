@@ -12,118 +12,7 @@ section .inner {
     margin: 0 auto;
 }
 
-/* INPUT TEXT, SELECT style */
 
-.input--text, .input--select{
-    height: 42px;
-    padding: 1px 10px;
-    border-radius: 3px;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
-    font-size: 16px;
-    background-color: #fff;
-    vertical-align: middle;
-    border: 1px solid transparent;
-    font-size: 0.8rem;
-    border: 0;   
-    width: 100%; 
-}
-.input--select {
-    background-image: url(../img/select-arrow-fallback-ln.png);
-    background-repeat: no-repeat;
-    background-position: 99% 50%;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-         appearance: none;
-}
-.input--text--left {
-    border-radius: 3px 0 0 3px;
-}
-.input--text--center {
-    border-radius: 0;
-    border-left: 1px solid #999;
-}
-.input--text--right {
-    border-radius: 0 3px 3px 0; 
-    border-left: 1px solid #999;
-}
-/* input > button icon */
-button.calendar, button.place {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    border: 0;
-    width: 20px;
-    height: 21px;
-    margin-top: -2px;
-    text-indent: -200px;
-    overflow: hidden;
-    cursor: pointer;
-    padding: 0;
-}
-button.calendar {
-    background: url(../img/icon-tripDetails.gif) no-repeat -61px -15px; 
-}
-button.place {
-    background: url(../img/icon-tripDetails.gif) no-repeat -16px -15px;
-}
-
-.rentacar-detail button.calendar {
-    right: 220px;
-}
-
-/* form focus style */
-
-.input--text:focus, .input--select:focus, button:focus{
-    box-shadow: 0 0 0 2px #000;
-    outline: none;
-}
-/* button tap style */
-.btn-grp {
-    font-size: 0;
-}
-
-.btn-grp button {
-    width: 117px;
-    height: 28px;
-    background-color: #2C748A;
-    border: 0px;
-    text-align: center;
-    line-height: 28px;
-    cursor: pointer;
-    font-size: 0.8rem;
-    color: #fff;
-}
-
-.btn-grp>button:nth-of-type(1) {
-    border-radius: 30px 0px 0px 30px;
-}
-
-.btn-grp>button:nth-of-type(2) {
-    border-radius: 0px 30px 30px 0px;
-}
-
-.btn-grp .btn-on {
-    background: url(../img/icn_check.png) no-repeat 15% 47%;
-    background-color: #87C9DB;
-    color: #032B3C;
-}
-/* BOOKING BUTTON */
-.hotel-book-btn,.rentacar-btn,.airline-book-btn {
-    width: 14.1%;
-    margin-top: 33px;
-}
-
-.hotelBookBtn, .rentACarBtn, .airlineBookBtn{
-    width: 100%;
-    height: 43px;
-    font-size: 0.875rem;
-    border-radius: 3px;
-    border: 1px solid #136186;
-    background: #a0e2f4;
-    color: #265866;
-    box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
-    padding: 0;
-}
 
 /* header */
 
@@ -139,8 +28,9 @@ header {
     background-color: #333;
 }
 
-/* MAIN VISUAL */
-/* MAIN EVENT */
+/* ----- MAIN VISUAL ----- */
+
+/* ----- MAIN EVENT ----- */
 main {
     position: relative;
 }
@@ -186,7 +76,7 @@ main {
 }
 
 
-/* QUICK BOOKING */
+/* ----- QUICK BOOKING ----- */
 .quick-booking-area {
     position: absolute;
     width: 100%;
@@ -194,6 +84,125 @@ main {
     margin: 0 auto;
     top: 348px;
 }
+
+/* ----- INPUT SELECT BUTTON MODULE ----- */
+
+/* INPUT TEXT, SELECT style */
+
+
+.input--text, .input--select{
+  height: 42px;
+  padding: 1px 10px;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+  font-size: 16px;
+  background-color: #fff;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  font-size: 0.8rem;
+  border: 0;   
+  width: 100%; 
+}
+.input--select {
+  background-image: url(../img/select-arrow-fallback-ln.png);
+  background-repeat: no-repeat;
+  background-position: 101% 50%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+}
+.input--text--left {
+  border-radius: 3px 0 0 3px;
+}
+.input--text--center {
+  border-radius: 0;
+  border-left: 1px solid #999;
+}
+.input--text--right {
+  border-radius: 0 3px 3px 0; 
+  border-left: 1px solid #999;
+}
+/* input > button icon */
+button.calendar, button.place {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  border: 0;
+  width: 20px;
+  height: 21px;
+  margin-top: -2px;
+  text-indent: -200px;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0;
+}
+button.calendar {
+  background: url(../img/icon-tripDetails.gif) no-repeat -61px -15px; 
+}
+button.place {
+  background: url(../img/icon-tripDetails.gif) no-repeat -16px -15px;
+}
+
+.rentacar-detail button.calendar {
+  right: 220px;
+}
+
+/* form focus style */
+
+.input--text:focus, .input--select:focus, button:focus{
+  box-shadow: 0 0 0 2px #000;
+  outline: none;
+}
+/* button tap style */
+.btn-grp {
+  font-size: 0;
+}
+
+.btn-grp button {
+  width: 117px;
+  height: 28px;
+  background-color: #2C748A;
+  border: 0px;
+  text-align: center;
+  line-height: 28px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: #fff;
+  padding: 0;
+}
+
+.btn-grp>button:nth-of-type(1) {
+  border-radius: 30px 0px 0px 30px;
+}
+
+.btn-grp>button:nth-of-type(2) {
+  border-radius: 0px 30px 30px 0px;
+}
+
+.btn-grp .btn-on {
+  background: url(../img/icn_check.png) no-repeat 15% 47%;
+  background-color: #87C9DB;
+  color: #032B3C;
+}
+/* BOOKING BUTTON */
+.hotel-btn, .rentacar-btn, .airline-ticket-btn, .airlineCheckinBtn {
+  width: 14.1%;
+  margin-top: 33px;
+}
+
+.hotelBtn, .rentACarBtn, .airlineTicketBtn,
+.airlineCheckinBtn, .airlineScheduleBtn{
+  width: 100%;
+  height: 43px;
+  font-size: 0.875rem;
+  border-radius: 3px;
+  border: 1px solid #136186;
+  background: #a0e2f4;
+  color: #265866;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  padding: 0;
+}
+
 
 /* QUICK BOOKING BOX */
 .quick-booking {
@@ -207,7 +216,8 @@ main {
     overflow: hidden;
 }
 
-/* TAB */
+
+/* ----- TAB ----- */
 
 .quick-booking-tab {
     width: 120px;
@@ -271,7 +281,7 @@ main {
     background-position: 2px -149px;
 }
 
-/* SECTION BOOKING */
+/* ----- SECTION BOOKING ----- */
 
 .quick-booking section {
     background-color: #0180a3;
@@ -289,17 +299,42 @@ section.rentacar {
     padding: 20px 25px;
 }
 
-.ticket-item li,
-.schedule-item li,
-.hotel-detail li,
-.rentacar-detail li {
+/* 렬과 사이즈 */
+.airline-ticket-detail>li,
+.airline-schedule-detail>li,
+.airline-checkin-detail>li,
+.hotel-detail>li,
+.rentacar-detail>li {
     float: left;
     position: relative;
 }
-.hotel-detail li,
-.rentacar-detail li {
+
+.airline-checkin-detail>li,
+.hotel-detail>li,
+.rentacar-detail>li {
     margin-right: 9px;
 }
+
+
+li[class$="-departure"], li[class$="-arrival"], li[class$="-date"] {
+  width: 33%;
+  height: 42px;
+}
+
+li[class$="-departure"] button, 
+li[class$="-arrival"] button, 
+li[class$="-date"] button {
+    top: 30%;
+}
+
+.airline-checkin-detail li {
+  width: 41.3%;
+  margin-top: 15px;
+  /* float: left; */
+}
+
+
+/* label, 더보기 */
 
 .quick-booking label,.more-opt{
     font-size: 0.75rem;
@@ -307,19 +342,362 @@ section.rentacar {
     margin-bottom: 7px;
 }
 
+/* ----- AIRLINE ----- */
 
-/* HOTEL */
+/* 항공권 탭 안에 세로버튼 */
+
+/* menu-act가 없을 때 */
+.airline-ticket, .airline-checkin, .airline-schedule {
+  width: 110px;
+  height: 100%;
+  float: left;
+}
+
+/* 기본값으로 아웃라인이랑 포인터 커서 만들어주기 */
+/* article을 호버했을때 필요하기때문에 */
+.airline-ticket:hover, .airline-checkin:hover, .airline-schedule:hover {
+  outline: 1px solid black;
+  outline-offset: -1px;
+  cursor: pointer;
+}
+
+/* 단 .menu-act가 있을경우 호버했을때 커서도 기본값, 아웃라인도 생기면 안됨 */
+.airline>.menu-act:hover {
+  outline: none;
+  cursor: auto;
+}
+
+
+
+/* article사이에 구분선을 주기위해 border-right */
+.airline-ticket, .airline-checkin {
+  border-right: 1px solid #3e9eb9;
+
+}
+
+/* jquery를 통해 클릭한 article에게 .menu-act를 주고 그 요소 width 넓히기 */
+.menu-act {
+  width: 830px;
+}
+
+
+/* menu-act 버튼 활성화 */
+
+/* .menu-act안에 .form-container이 필요한 이유:  */
+/* .menu-act가 적용된 section 전체가 display: none이 되어버리면 안되고 그 안에 요소만 
+display:none이 되어야함 */
+.menu-act>.form-container {
+  display: block;
+}
+
+/* 기본값(.menu-act없는경우) 일때 .form-container이 안보이도록, 대신 .icon을 보여지도록 해야함 */
+.form-container {
+padding: 20px;
+position: relative;
+display: none;
+}
+
+/* .menu-icon-container 통해서 아이콘 중앙정렬시키기 */
+.menu-icon-container {
+  text-align: center;
+  padding-top: 80px;
+  width: 100%;
+}
+
+.menu-icon-container>span {
+  padding-top: 50px;
+}
+
+/* .booking-detail안에 있는 .icon 공통 속성 */
+.menu-icon-container .menu-icon {
+  background-image: url('../img/quick-v-tab-icon-list.png');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  
+}
+
+
+/* 스프라이트 이미지 좌표값으로 아이콘 배경이미지 바꿔주기 */
+.airline-ticket .menu-icon {
+  background-position: -330px -10px;
+}
+
+.airline-checkin .menu-icon {
+  background-position: -521px -15px;
+}
+
+.airline-schedule .menu-icon {
+  background-position: -713px -11px;
+}
+
+/* .menu-act클래스가 적용되었을때 .menu-icon 담고 있는 .menu-icon-container안보이게하기 */
+.menu-act .menu-icon-container {
+  display: none;
+}
+
+
+/* ----- 항공권 예매 ----- */
+
+.airline-ticket h3 {
+  width: 50px;
+  float: left;
+  margin-top: 6px;
+}
+
+.airline-ticket-form {
+  margin-top: 10px;
+}
+
+/* 탑승자 input 공통속성 */
+.input-passenger-count {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 0;
+}
+
+/* .airline-ticket-trip-type 
+.booking-tab a 에서 display: block된거 다시 display 재설정해주기
+*/
+
+.airline-ticket-trip-type {
+width: 100%;
+margin-bottom: 10px;
+}
+
+.airline-ticket-trip-type a,
+.airline-ticket-trip-type label,
+.airline-schedule-trip-type label {
+display: inline;
+}
+
+/* id선택자 말고 다른걸로 정리 */
+#round-trip-ticket, .multi-city {
+margin-left: 5px;
+}
+
+.multi-city {
+font-size: 0.6rem;
+text-decoration: underline;
+}
+
+/* quick-help 공통속성으로 활용 */
+.airline-ticket-trip-type .quick-help {
+display: inline-block;
+background: url('../img/icon-quick-help.png') no-repeat;
+width: 15px;
+height: 0;
+padding-top: 14px;
+margin-left: 3px;
+overflow: hidden;
+font-size: 1.5rem;
+}
+
+.airline-ticket-trip-type>* {
+vertical-align: middle;
+}
+
+/* 성인 소아 유아 */
+.passenger-count-container {
+display: flex;
+flex-flow: row nowrap;
+border-radius: 20px;
+width: 110px;
+height: 40px;
+background-color: #fff;
+}
+
+.passenger-count-container input {
+margin: 0 1px;
+}
+
+.airline-ticket-passenger, .airline-ticket-cabin-class, .airline-ticket-option {
+  margin-top: 15px;
+margin-right: 10px;
+}
+.airline-ticket-cabin-class,
+.airline-ticket-option {
+width: 15%;
+}
+
+
+.inc-btn, .dec-btn {
+padding: 40px 0 0 0;
+width: 35px;
+background: url('../img/btn-booking-both.png') no-repeat 11px 14px #f4f4f4;
+}
+
+.dec-btn {
+background-position: 11px 18px;
+border-radius: 3px 0 0 3px;
+}
+
+.inc-btn {
+background-position: 11px -20px;
+border-radius: 0 3px 3px 0;
+}
+
+.multi-city-more-info, .child-more-info, .infant-more-info, .option-more-info, .number-more-info {
+position: absolute;
+top: -2px;
+left: 24px;
+vertical-align: middle;
+background: url('../img/icon-quick-help.png') no-repeat;
+}
+
+.multi-city-more-info {
+  top: 3px;
+  left: 133px;
+}
+
+.option-more-info {
+left: 50px;
+}
+
+/* ----- 체크인 ----- */
+.airline-checkin-form {
+position: relative;
+}
+
+
+/* 항공권 체크인 주의사항 */
+.airline-checkin-detail .validation-check-container {
+  width: 100%;
+margin-top: 5px;
+}
+.airline-checkin-detail .validation-check-container *{
+  display: inline-block;
+}
+
+.airline-checkin-detail .validation-check-container input {
+margin: 3px;
+width: 15px;
+height: 15px;
+}
+
+.airline-checkin-detail .validation-check-container label {
+margin: 0;
+font-weight: bold;
+}
+
+
+
+/* .number-more-info 첫번째 li를 기준으로 움직이도록 */
+.airline-checkin-detail>li:first-child {
+position: relative;
+}
+
+/* number-more-info 좌표수정 */
+.number-more-info {
+top: -2px;
+left: 143px;
+}
+
+
+
+
+
+
+/* ----- 출도착 및 스케줄 ----- */
+
+
+.airline-schedule h3 {
+  width: 100px;
+  float: left;
+  margin-top: 6px;
+}
+
+.airline-schedule-trip-type {
+margin: 10px 0;
+font-size: 0;
+}
+
+
+.airline-schedule-trip-type label {
+/* font-size: 0.8rem; */
+padding: 0;
+margin-right: 15px;
+}
+
+
+/* 스케줄 공지사항 */
+.airline-schedule-notice ul{
+list-style: initial; 
+padding-left: 20px;
+margin-top: 15px;
+width: 500px;
+}
+
+.airline-schedule-notice li {
+margin: 5px 0;
+font-size: 0.5rem;
+}
+
+.airline-schedule-notice em {
+font-style: normal;
+color: #fef78c;
+font-weight: bold;
+}
+
+.airline-schedule-notice a {
+text-decoration: underline;
+}
+
+.airline-schedule-detail>li:nth-child(-n+3) {
+width: 28%;
+}
+
+.airline-schedule-arrival {
+margin-right: 8px;
+}
+
+
+/* 버튼 공통속성(p:a -> 각자 감싸는 li가 p:r) */
+.airlineScheduleBtn, .airlineCheckinBtn, .airlineTicketBtn {
+  position: absolute;
+  width: 110px;
+}
+
+.airlineTicketBtn {
+  top: 0px;
+  right: -5px;
+}
+
+.airlineCheckinBtn {
+  top: -116px;
+  right: -460px;
+}
+
+.airlineScheduleBtn {
+  top: -43px;
+  right: -295px;
+}
+
+
+
+
+
+
+/* ----- HOTEL ----- */
 
 /* size */
 .hotel-destination {
     width: 50%;
 }
-.hotel-check-in,.hotel-check-out {
+.hotel-checkin,.hotel-checkout {
     width: 20%;
 }
-.rooms-guests {
+.hotel-rooms-guests {
     width: 35%;
     margin-top: 15px;
+}
+
+.hotel-rooms-guests #roomsGuests {
+  width: 100%;
 }
 
 /* input text font color */
@@ -328,7 +706,7 @@ section.rentacar {
 }
 
 /* Stay result */
-.stay-nights {
+.hotel-stay-nights {
     width: 40px;
     height: 40px;
     display: block;
@@ -350,30 +728,30 @@ section.rentacar {
     text-decoration: underline;
 }
 
-/* RENT A CAR LOCATION TAB */
+/* ----- RENT A CAR ----- */
 
 .location {
     margin-bottom: 15px;
 }
 
 /* rent a car li size */
-.place-pick-up,.drop-off-pickup {
-    width: 42%;
+.rentacar-pickup,.rentacar-dropoff {
+    width: 39.8%;
 }
-.skypass-member {
-    width: 13%;
+.rentcar-skypass {
+    width: 10%;
 }
-.rental-day,.return-day {
+.rentacar-rental-day,.rentacar-return-day {
     width: 42%;
     margin-top: 15px;
 }
-.rental-day input.input--text,.return-day input.input--text{
+.rentacar-rental-day input.input--text,.rentacar-return-day input.input--text{
     width: 50%;
 }
-.rental-day .input--select,.return-day .input--select{
+.rentacar-rental-day .input--select,.rentacar-return-day .input--select{
     width: 24%;
 }
-.rental-day input,.return-day input {
+.rentacar-rental-day input,.rentacar-rentacar-return-day input {
     width: 88%;
 }
 .rentacar-btn {
@@ -396,7 +774,7 @@ section.rentacar {
     border: 1px solid #000;
     margin-top: -3px;
 }
-.drop-off-pickup::after {
+.rentacar-dropoff::after {
     content: "";
     display: block;
     position: absolute;
@@ -405,492 +783,4 @@ section.rentacar {
     left: 0;
     right: 0;
     background-color: rgba(18,129,162,0.5);
-}
-
-
-
-/* airline section */
-
-
-
-/* menu-act가 없을때 기본값 width */
-.ticket, .checkin, .flight-status-schedule {
-    width: 110px;
-    height: 100%;
-    float: left;
-}
-
-
-/* 기본값으로 아웃라인이랑 포인터 커서 만들어주기 */
-/* article을 호버했을때 필요하기때문에 */
-.ticket:hover, .checkin:hover, .flight-status-schedule:hover {
-    outline: 1px solid black;
-    cursor: pointer;
-}
-
-/* 단 .menu-act가 있을경우 호버했을때 커서도 기본값, 아웃라인도 생기면 안됨 */
-.airline-ticket>.menu-act:hover {
-    outline: none;
-    cursor: auto;
-}
-
-/* article사이에 구분선을 주기위해 border-right */
-.ticket, .checkin {
-    border-right: 1px solid #3e9eb9;
-}
-
-/* jquery를 통해 클릭한 article에게 .menu-act를 주고 그 요소 width 넓히기 */
-.menu-act {
-    width: 830px;
-}
-
-
-/* .menu-act안에 .form-container이 필요한 이유:  */
-/* .menu-act가 적용된 section 전체가 display: none이 되어버리면 안되고 그 안에 요소만 
-display:none이 되어야함 */
-.menu-act>.form-container {
-    display: block;
-}
-
-/* 기본값(.menu-act없는경우) 일때 .form-container이 안보이도록, 대신 .icon을 보여지도록 해야함 */
-.form-container {
-    display: none;
-}
-
-/* .menu-icon-container 통해서 아이콘 중앙정렬시키기 */
-.menu-icon-container {
-    text-align: center;
-    padding-top: 80px;
-}
-
-.menu-icon-container>span {
-    padding-top: 50px;
-}
-
-/* .booking-detail안에 있는 .icon 공통 속성 */
-.menu-icon-container .menu-icon {
-    background-image: url('../img/quick-v-tab-icon-list.png');
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 30px;
-    display: inline-block;
-    
-    /* margin-top: 19px; */
-}
-
-
-/* 스프라이트 이미지 좌표값으로 아이콘 배경이미지 바꿔주기 */
-.ticket .menu-icon {
-    background-position: -330px -10px;
-}
-
-.checkin .menu-icon {
-    background-position: -521px -15px;
-}
-
-.flight-status-schedule .menu-icon {
-    background-position: -713px -11px;
-}
-
-/* .menu-act클래스가 적용되었을때 .menu-icon 담고 있는 .menu-icon-container안보이게하기 */
-.menu-act .menu-icon-container {
-    display: none;
-}
-
-
-/* .form-container 공통 부분
-h4에 p:a 주기때문에 p:r*/
-.form-container {
-    padding: 20px;
-    position: relative;
-}
-
-/* article 항공권 예매 */
-
-.ticket h3 {
-    width: 50px;
-    float: left;
-    margin-top: 6px;
-}
-
-.ticket-form {
-    margin-top: 10px;
-}
-/* 탑승자 input 공통속성 */
-.input-passenger-count {
-    height: 40px;
-    width: 40px;
-    text-align: center;
-    font-size: 1rem;
-    font-weight: bold;
-    border: 0;
-}
-
-/* .trip-type-option 
-.booking-tab a 에서 display: block된거 다시 display 재설정해주기
-*/
-.trip-type-option {
-    width: 100%;
-  font-size: 0.8rem;
-  margin-bottom: 10px;
-
-}
-
-.trip-type-option a, .trip-type-option label, .schedule-trip-type label {
-  display: inline;
-}
-
-#round-trip-ticket, .multi-city {
-  margin-left: 5px;
-}
-
-.multi-city {
-  font-size: 0.6rem;
-  text-decoration: underline;
-}
-
-.trip-type-option .quick-help {
-  display: inline-block;
-  background: url('../img/icon-quick-help.png') no-repeat;
-  width: 15px;
-  height: 0;
-  padding-top: 14px;
-  margin-left: 3px;
-  overflow: hidden;
-  font-size: 1.5rem;
-}
-
-.trip-type-option>* {
-  vertical-align: middle;
-}
-
-
-.departure-airport, .arrival-airport, .trip-date {
-  /* display: inline-block; */
-  /* border: 1px solid; */
-  /* width: 260px; */
-  width: 30%;
-  height: 40px;
-  /* margin-bottom: 10px; */
-}
-
-.departure-airport button, 
-.arrival-airport button, 
-.trip-date button {
-    top: 30%;
-}
-
-/* 
-.input--text {
-  display: block;
-  line-height: 36px;
-}
-
-.input--text input[type="text"] {
-  height: 36px;
-  padding: 1px 5px 1px 0.5em;
-  border: none;
-  width: 230px;
-} */
-
-
-/* 
-
-.departure-airport {
-  background-color: #ffffff;
-  border-radius: 4px 0 0 4px;
-}
-
-.arrival-airport {
-  background-color: #ffffff;
-  border-left: 1px solid #d5d5d5;
-  border-right: 1px solid #d5d5d5;
-}
-
-.trip-date {
-  background-color: #ffffff;
-  border-radius: 0 4px 4px 0;
-} */
-
-/* 버튼 bg주고 글자날리기 */
-.btn-hide {
-  display: inline-block;
-  margin: 0;
-  border: none;
-  width: 15px;
-  height: 0;
-  padding-top: 30px;
-  overflow: hidden; 
-  vertical-align: middle;
-  font-size: 2rem;
-}
-
-.passenger-count-container {
-  display: flex;
-  flex-flow: row nowrap;
-  border-radius: 20px;
-  width: 110px;
-  height: 40px;
-  background-color: #fff;
-}
-
-.passenger-count-container input {
-  margin: 0 1px;
-}
-
-.passenger, .cabin-class, .additional-option {
-    margin-top: 15px;
-  margin-right: 10px;
-}
-
-.passenger label, .cabin-class label, .additional-option label{
-  font-size: 0.7rem;
-  display: block;
-  /* padding: 2px 0px 7px 3px; */
-}  
-
-.inc-btn, .dec-btn {
-  padding: 40px 0 0 0;
-  width: 35px;
-  background: url('../img/btn-booking-both.png') no-repeat 11px 14px #f4f4f4;
-}
-
-.dec-btn {
-  background-position: 11px 18px;
-  border-radius: 3px 0 0 3px;
-}
-
-.inc-btn {
-  background-position: 11px -20px;
-  border-radius: 0 3px 3px 0;
-}
-
-.child-more-info, .infant-more-info, .option-more-info, .number-more-info {
-  position: absolute;
-  top: -2px;
-  left: 24px;
-  vertical-align: middle;
-  background: url('../img/icon-quick-help.png') no-repeat;
-}
-
-/* .form-container a[class$="more-info"] {
-  position: absolute;
-  font-size: 5rem;
-  top: 1px;
-  left: 27px;
-  vertical-align: middle;
-  background: url('../img/icon-quick-help.png') no-repeat;
-} */
-
-.option-more-info {
-  left: 50px;
-}
-
-
-.quick-booking select {
-  width: 130px;
-  height: 40px;
-  font-size: 0.875rem;
-  border: 0;
-  padding: 2px 0 2px 15px;
-  background: url('../img/select-arrow-fallback.png') no-repeat 100% 40% #ffffff;  
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
-
-
-
-.search-ticket-button, .checkin-button, .schedule-button, .flight-status-button {
-  height: 40px;
-  width: 100px;
-  font-size: 0.8rem;
-  vertical-align: bottom;
-  margin-top: 20px;
-  font-weight: 600;
-  color: #265866;
-  background-color: #a0e2f4;
-  border: 1px solid #265866;
-  border-radius: 3px;
-  box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
-}
-
-/* 체크인 */
-.checkin-form {
-  /* padding-top: 20px; */
-  position: relative;
-}
-
-.checkin-form {
-}
-
-.checkin-item li {
-  float: left;
-  width: 330px;
-  margin: 15px 0 0 0;
-}
-
-.checkin-item li label{
-  display: block;
-  font-size: 0.8rem;
-  margin-bottom: 5px;
-}
-
-.checkin-form li input {
-  width: 320px;
-  border-radius: 3px;
-  border: none;
-  padding-left: 1em; 
-}
-
-.checkin-item .validation-check-container {
-    width: 600px;
-  margin-top: 5px;
-}
-.checkin-item .validation-check-container *{
-    display: inline-block;
-}
-.checkin-item .validation-check-container input {
-  margin: 3px;
-  width: 15px;
-  height: 15px;
-}
-
-.checkin-item .validation-check-container label {
-  margin: 0;
-  font-size: 0.7rem;
-  font-weight: bold;
-  vertical-align: middle;
-
-}
-
-/* 버튼(계속) pos:abs해서 위치잡아주기, 기준(.checkin-form) */
-.checkin-button {
-  position: absolute;
-  bottom: 41px;
-  right: 10px;
-  width: 110px;
-}
-
-/* .number-more-info 첫번째 li를 기준으로 움직이도록 */
-.checkin-item>li:first-child {
-  position: relative;
-}
-
-/* number-more-info 좌표수정 */
-.number-more-info {
-  top: -2px;
-  left: 143px;
-}
-
-#checkin-date {
-  width: 320px;
-}
-
-
-
-
-/* 출도착 및 스케줄 */
-.schedule-search-container {
-  width: 670px;
-  /* background-color: turquoise; */
-}
-
-.schedule-search-heading {
-  margin: 0;
-}
-
-/* .submenu-act>form{
-  display: block;
-}
-
-.schedule-form, .flight-status-form {
-  display: none;
-  padding-top: 20px;
-} */
-
-
-.form-container {
-  position: relative;
-  padding-top: 20px;
-}
-
-.form-container h5 {
-  position: absolute;
-}
-
-.flight-status-schedule h3 {
-    width: 100px;
-    float: left;
-    margin-top: 6px;
-}
-
-.schedule-search-heading {
-  top: 20px;
-  left: 140px;
-}
-
-.flight-status-heading {
-  top: 20px;
-  left: 250px;
-}
-
-.submenu-act h5 a {
-  display: inline-block;
-  color: #215264;
-  font-weight: bold;
-  font-size: 0.8rem;
-  padding: 5px 10px 5px 30px;
-  border-radius: 10px 0px 0px 10px;
-  background: url('../img/icn_check.png')no-repeat #84c9dc;
-  background-position-x: 15px;
-  background-position-y: 6px;
-}
-
-.schedule-trip-type {
-  margin: 10px 0;
-  font-size: 0;
-}
-
-
-.schedule-trip-type label {
-  font-size: 0.8rem;
-  padding: 0;
-  margin-right: 15px;
-}
-
-.schedule-item>li {
-  /* background-color: #fff; */
-  /* width: 218px; */
-  float: left;
-}
-
-.schedule-item>li input[type="text"] {
-  /* width: 190px; */
-  padding-left: 1em;
-}
-
-.schedule-item>li:nth-child(2) {
-  border-radius: 0 4px 4px 0;
-}
-
-.schedule-item>li:last-child {
-  margin-left: 10px;
-}
-
-.notice-list {
-  list-style: initial !important; 
-  padding-left: 20px;
-  font-size: 0.8rem;
-}
-
-.notice-list li {
-  margin: 2px 0;
-}
-
-.schedule-button, .flight-status-button {
-  /* position: absolute;
-  top: 58px;
-  right: 20px; */
-  width: 110px;
 }
