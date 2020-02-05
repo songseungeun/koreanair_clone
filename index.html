@@ -17,17 +17,250 @@
 </head>
 <body>
     <div class="body-container">
+        <!-- HEADER -->
         <header>
-            <div class="header-top">
-
+            <div class="siteutil clearfix">
+                <div class="region">
+                    <h2 class="a11y-hidden">사이트 내 지역 언어 설정</h3>
+                    <button>지역/언어</button>
+                    <div class="region-list">
+                        <span class="region-current-country">대한민국</span>
+                        <ul>
+                            <li><span class="region-current-lang">한국어</span></li>
+                            <li><a href="#" class="lang">English</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="member clearfix">
+                    <ul>
+                        <li><a href="#" >로그인</a></li>
+                        <li><a href="#" >회원가입</a></li>
+                        <li><a href="#" >나의 예약</a></li>
+                        <li><a href="#" >위시리스트</a></li>
+                    </ul>
+                    <div class="member-search">
+                        <form action="검색">
+                            <fieldset>
+                                <legend>검색 폼</legend>
+                                <label for="inputSearch" class="a11y-hidden">검색</label>
+                                <input name="search" type="text" placeholder="검색" class="member-input-search" id="inputSearch" required >
+                                <button type="submit" class="member-search-btn"></button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>  
             </div>
-            <div class="header-btm">
-                <h1>KOREAN AIR</h1>
-                <h2>메인메뉴</h2>
+            <div class="menu-sec clearfix">
+                <div class="logo">
+                        <h1 class="a11y-hidden">대한항공</h1>
+                        <a title="Korean Air" href="#" class="logo-krair"></a>
+                        <a title="스카이팀(새창 열기)" href="#" class="logo-skyteam"></a>
+                </div>
+                <nav class="menu">
+                    <h2 class="a11y-hidden">메인메뉴</h2>
+                    <ul>
+                        <li>
+                            <!-- button > h2 으로 바꾸고 -->
+                            <!-- <button class="menu-book-btn" type="button">항공권 예매</button> -->
+                            <h2><a href="#" role="button" class="menu-book-btn" type="button">항공권 예매</a></h2>
+                            <div class="menu-book-sub">
+                                <div class="menu-book-ticket">
+                                    <!-- h2 > h3 으로 수정 -->
+                                    <h3><a class="blue-bold-heading" href="#">항공권 예매</a></h3>
+                                    <ul>
+                                        <li><a href="#">일반 예매</a></li>
+                                        <li><a href="#">조회/변경/환불</a></li>
+                                    </ul>    
+                                </div>
+                                <div class="menu-book-bonus">
+                                    <h3><a class="blue-bold-heading" href="#">보너스 항공권 예매</a></h3>
+                                    <ul>
+                                        <li><a href="#">보너스 예매</a></li>
+                                        <li><a href="#">조회/변경/환불</a></li>
+                                        <li><a href="#">보너스 좌석 상황 보기</a></li>
+                                        <li><a href="#">보너스 알리미</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-book-gift">
+                                    <h3><a class="blue-bold-heading" href="#">항공권 선물하기</a></h3>
+                                    <ul>
+                                        <li><a href="#">국내선 선물하기</a></li>
+                                        <li><a href="#">국제선 선물하기</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-book-research">
+                                    <h3><a class="blue-bold-heading" href="#">항공편 조회</a></h3>
+                                    <ul>
+                                        <li><a href="#">출도착 조회</a></li>
+                                        <li><a href="#">스케줄 조회</a></li>
+                                    </ul>
+                                </div>
+                                    <h3 class="menu-book-map-heading"><a class="blue-bold-heading" href="#">운항 노선도</a></h3>
+                                <div class="menu-book-notice">
+                                    <h3><a class="blue-bold-heading" href="#">이용 안내</a></h3>
+                                    <ul>
+                                        <li><a href="#">항공권 변경 및 환불 안내</a></li>
+                                        <li><a href="#">국내선 운임 안내</a></li>
+                                        <li><a href="#">환승전용내항기 예매</a></li>
+                                        <li><a href="#">스카이팀 세계일주 운임</a></li>
+                                        <li><a href="#">공동운항 항공사</a></li>
+                                        <li><a href="#">구매 가이드</a></li>
+                                    </ul>
+                                </div>
+                                <!-- 창닫기버튼 -->
+                                <button></button>
+                            </div>
+                        </li>
+                        <li>
+                            <h2><a href="#" role="button" class="menu-skypass-btn" type="button">스카이 패스</a></h2>
+                            <div class="menu-skypass-sub">
+                                <div class="menu-skypass-member">
+                                    <h3><a class="blue-bold-heading">회원 혜택</a></h3>
+                                    <ul>
+                                        <li><a href="#">스카이패스 회원 혜택</a></li>
+                                        <li><a href="#">스카이팀 공동 혜택</a></li>
+                                        <li><a href="#">가족 마일리지 제도</a></li>
+                                        <li><a href="#">제휴사 할인 혜택</a></li>
+                                        <li><a href="#">상용기업우대제도</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-skypass-mileage">
+                                    <h3><a class="blue-bold-heading">마일리지 적립</a></h3>
+                                    <ul>
+                                        <li><a href="#">대한항공</a></li>
+                                        <li><a href="#">신용카드</a></li>
+                                        <li><a href="#">제휴 항공사</a></li>
+                                        <li><a href="#">호텔</a></li>
+                                        <li><a href="#">렌터카</a></li>
+                                        <li><a href="#">기타 제휴사</a></li>
+                                        <li><a href="#">마일리지 사후 적립 신청</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-skypass-bonus">
+                                    <h3><a class="blue-bold-heading" href="#">항공 보너스 사용</a></h3>
+                                    <ul>
+                                        <li><a href="#">보너스 항공권</a></li>
+                                        <li><a href="#">좌석승급 보너스</a></li>
+                                        <li><a href="#">세계일주 보너스</a></li>
+                                        <li><a href="#">KAL 라운지 보너스</a></li>
+                                        <li><a href="#">초과 수하물 보너스</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-skypass-nonair">
+                                    <h3><a class="blue-bold-heading" href="#">비항공 보너스 사용</h3>
+                                    <ul>
+                                        <li><a href="#">로고 상품</a></li>
+                                        <li><a href="#">코트룸 보너스</a></li>
+                                        <li><a href="#">마일로 호텔로</a></li>
+                                        <li><a href="#">마일로 렌터카</a></li>
+                                        <li><a href="#">마일로 리무진</a></li>
+                                        <li><a href="#">마일리지 투어</a></li>
+                                        <li><a href="#">문화 체험 상품</a></li>
+                                    </ul>
+                                </div>
+                                <button></button>
+                            </div>
+                        </li>
+                        <li>
+                            <h2><a href="#" role="button" class="menu-service-btn" type="button">서비스 안내</a></h2>
+                            <div class="menu-service-sub">
+                                <div class="menu-service-boarding">
+                                    <h3><a class="blue-bold-heading" href="#">탑승 수속</a></h3>
+                                    <ul>
+                                        <li><a href="#">탑승 수속</a></li>
+                                        <li><a href="#">연결 탑승수속</a></li>
+                                        <li><a href="#">사전 좌석배정</a></li>
+                                        <li><a href="#">키오스크</a></li>
+                                        <li><a href="#">모바일/웹 체크인</a></li>
+                                        <li><a href="#">출입국 규정 조회</a></li>
+                                    </ul>
+                                </div>
+                                    <h3><a class="blue-bold-heading menu-service-navi" href="#">항공기 안내</a></h3>
+                                <div class="menu-service-baggage">
+                                    <h3><a class="blue-bold-heading" href="#">수하물</a></h3>
+                                    <ul>
+                                        <li><a href="#">운송 가능 수하물</a></li>
+                                        <li><a href="#">운송 제한 품목</a></li>
+                                        <li><a href="#">수하물 연결 수속</a></li>
+                                        <li><a href="#">분실/지연/파손</a></li>
+                                        <li><a href="#">기내 유실물 찾기</a></li>
+                                        <li><a href="#">수하물 준비방법</a></li>
+                                    </ul>
+                                </div>
+                                    <h3><a class="blue-bold-heading menu-service-gift" href="#">기내면세품</a></h3>
+                                <div class="menu-service-customer">
+                                    <h3><a class="blue-bold-heading" href="#">도움이 필요한 고객</a></h3>
+                                    <ul>
+                                        <li><a href="#">한가족 서비스</a></li>
+                                        <li><a href="#">비동반 소아 서비스</a></li>
+                                        <li><a href="#">몸이 불편하신 고객</a></li>
+                                        <li><a href="#">임신부 고객</a></li>
+                                        <li><a href="#">유아동반 고객</a></li>
+                                        <li><a href="#">반려동물과 여행하기</a></li>
+                                    </ul>
+                                </div>
+                                    <h3><a class="blue-bold-heading menu-service-coatroom" href="#">코트룸 서비스</a></h3>
+                                <div class="menu-service-info">
+                                    <h3><a class="blue-bold-heading" href="#">공항 및 환승 정보</a></h3>
+                                    <ul>
+                                        <li><a href="#">인천공항</a></li>
+                                        <li><a href="#">도심공항</a></li>
+                                        <li><a href="#">취항지 정보</a></li>
+                                        <li><a href="#">KAL 라운지</a></li>
+                                        <li><a href="#">KAL 리무진</a></li>
+                                        <li><a href="#">Rail & Fly</a></li>
+                                        <li><a href="#">SkyPriority</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-service-class">
+                                    <h3><a class="blue-bold-heading" href="#">기내 및 클래스별 서비스</a></h3>
+                                    <ul>
+                                        <li><a href="#">일등석</a></li>
+                                        <li><a href="#">프레스티지석</a></li>
+                                        <li><a href="#">일반석</a></li>
+                                        <li><a href="#">기내 서비스 순서</a></li>
+                                        <li><a href="#">기내 오락</a></li>
+                                        <li><a href="#">기내식 및 특별기내식</a></li>
+                                        <li><a href="#">기내 여행 가이드</a></li>
+                                    </ul>
+                                </div>
+                                <button></button>
+                            </div>
+                        </li>
+                        <li>
+                            <h2><a href="#"class="menu-promo-btn" type="button">프로모션/여행상품</a></h2>
+                            <div class="menu-promo-sub">
+                                    <h3><a class="blue-bold-heading menu-promo-event" href="#">이벤트</a></h3>
+                                    <h3><a class="blue-bold-heading menu-promo-special" href="#">특가 항공권</a></h3>
+                                    <h3><a class="blue-bold-heading menu-promo-boardpass" href="#">엑설런트 보딩패스</a></h3>
+                                    <h3><a class="blue-bold-heading menu-promo-program" href="#">엑설런트 트랜짓 프로그램</a></h3>
+                                <div class="menu-promo-service">
+                                    <h3><a class="blue-bold-heading" href="#">전용기 서비스</a></h3>
+                                    <ul>
+                                        <li><a href="#">서비스 개요</a></li>
+                                        <li><a href="#">상품 안내</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-promo-product">
+                                    <h3><a class="blue-bold-heading" href="#">여행상품</a></h3>
+                                    <ul>
+                                        <li><a href="#">해외여행상품</a></li>
+                                        <li><a href="#">호텔</a></li>
+                                        <li><a href="#">렌터카</a></li>
+                                        <li><a href="#">해외여행자 보험</a></li>
+                                        <li><a href="#">플라이트 아카데미</a></li>
+                                        <li><a href="#">여행정보사이트</a></li>
+                                    </ul>
+                                </div>
+                                <button></button>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </header>
+        <!-- MAIN -->
         <main>
-            
             <section class="main-event">
                 <div class="inner">
                     <h2 class="a11y-hidden">메인 이벤트</h2>
@@ -38,8 +271,6 @@
                     </a>
                 </div>
             </section>
-
-
             <div class="quick-booking-area">
                 <div class="quick-booking">
                     <ul class="quick-booking-tab" role="tablist">
@@ -144,7 +375,6 @@
                                                     <option value="airline-ticket-class-first">일등석</option>
                                                 </select>
                                             </li>
-
                                             <!-- 션 영역 다시 손보기 -->
                                             <li class="airline-ticket-option">
                                                 <label for="airline-ticket-option-select">추가옵션</label>
@@ -276,7 +506,6 @@
                                                 <button type="submit" class="airlineScheduleBtn">조회하기</button>
                                             </li>
                                         </ul>
-
                                     </fieldset>
                                 </form>
                             </div>
@@ -325,8 +554,7 @@
                                     </li>
                                 </ul>
                             </fieldset>
-                        </form>
-                       
+                        </form>                       
                     </section>
                     <section class="rentacar" role="tabpanel" id="rentacar-tabpanel" aria-labelledby="rentacarTab">
                         <!-- form 안에 넣었더니 버튼을 클릭할 때 input을 입력하라는 경고창이 떠서 마크업 수정 -->
@@ -407,6 +635,142 @@
                         
                     </section>
                 </div>
+            </div>
+            <div class="section-event-container">
+                <section class="section-event">
+                    <h2 class="event-heading">진행 중 이벤트</h2>
+                    <ul class="event-container clearfix">
+                        <li>
+                            <a href="#">
+                                <img src="https://www.koreanair.com/content/dam/koreanair/kr/Special%20Promotions/promotion%20teaser/new%20main/skyshop_event.png"
+                                    alt="">
+                                <div class="cont-disc event-disc">
+                                    <h3>SKYSHOP 복주머니 이벤트</h3>
+                                    <p>경자년 특별 혜택! 기내면세품 5% 할인받고 복주머니 경품 이벤트에 응모하세요.</p>
+                                    <span class="top-arrow"></span>
+                                </div>
+                            </a>
+                        </li>        
+                        <li class="event-cont">
+                            <a href="#">
+                                <img src="https://www.koreanair.com/content/dam/koreanair/kr/Special%20Promotions/promotion%20teaser/new%20main/us6_sale_234x211_pc_small.jpg"
+                                    alt="">
+                                <div class="cont-disc event-disc">
+                                    <h3>미국의 숨은 보석 찾기</h3>
+                                    <p>미주 6개 도시 항공권 특가를 확인해 보세요!</p>
+                                    <span class="top-arrow"></span>
+                                </div>
+                            </a>
+                        </li>        
+                        <li class="event-cont">
+                            <a href="#">
+                                <img src="https://www.koreanair.com/content/dam/koreanair/kr/Special%20Promotions/promotion%20teaser/new%20main/woori_pc.png"
+                                    alt="">
+                                <div class="cont-disc event-disc">
+                                    <h3>우리카드X대한항공이 쏜다!</h3>
+                                    <p>대한항공 마일리지 적립에 항공권 경품까지!</p>
+                                    <span class="top-arrow"></span>
+                                </div>
+                            </a>
+                        </li>        
+                        <li class="event-cont">
+                            <a href="#">
+                                <img src="https://www.koreanair.com/content/dam/koreanair/kr/Special%20Promotions/promotion%20teaser/new%20main/hotelscom_1910.png"
+                                    alt="">
+                                <div class="cont-disc event-disc">
+                                    <h3>호텔스닷컴 마일리지 적립 안내</h3>
+                                    <p>호텔이용 USD 1당 스카이패스 1 마일리지 적립 혜택을 누리세요!</p>
+                                    <span class="top-arrow"></span>
+                                </div>
+                            </a>
+                        </li>        
+                        <li class="event-cont">
+                            <a href="#">
+                                <img src="https://www.koreanair.com/content/dam/koreanair/kr/Special%20Promotions/promotion%20teaser/new%20main/KALPAK_PR_new.jpg"
+                                    alt="">
+                                <div class="cont-disc event-disc">
+                                    <h3>KALPAK 프레스티지 여행</h3>
+                                    <p>내 여행이 업그레이드 된다!</p>
+                                    <span class="top-arrow"></span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>        
+                    <a class="more-view" href="#">이벤트 전체보기</a>        
+                </section>       
+                <section class="section-discount">        
+                    <h2 class="discount-heading">특가 항공권</h2>        
+                    <ul class="discount-container clearfix">
+                        <li>
+                            <a href="#">
+                                <img src="https://www.koreanair.com/content/dam/koreanair/Global/discountTickets/cxr-c.jpg"
+                                    alt="">
+                                <div class="cont-disc discount-disc">
+                                    <h3>서울/인천 ↔ 나트랑</h3>
+                                    <p>KRW 475,500부터</p>
+                                </div>
+                            </a>
+                        </li>        
+                        <li>
+                            <a href="#">
+                                <img src="https://www.koreanair.com/content/dam/koreanair/Global/discountTickets/han-c.jpg"
+                                    alt="">
+                                <div class="cont-disc discount-disc">
+                                    <h3>서울/인천 ↔ 하노이</h3>
+                                    <p>KRW 331,200부터</p>
+                                </div>
+                            </a>
+                        </li>        
+                        <li>
+                            <a href="#">
+                                <img src="https://www.koreanair.com/content/dam/koreanair/Global/discountTickets/fuk-c.jpg"
+                                    alt="">
+                                <div class="cont-disc discount-disc">
+                                    <h3>서울/인천 ↔ 후쿠오카</h3>
+                                    <p>KRW 179,000부터</p>
+                                </div>
+                            </a>
+                        </li>        
+                        <li class="long-cont">
+                            <a href="#">
+                                <img src="https://www.koreanair.com/content/dam/koreanair/Global/discountTickets/cdg-a.jpg"
+                                    alt="">
+                                <div class="cont-disc discount-disc">
+                                    <h3>서울/인천 ↔ 파리</h3>
+                                    <p>KRW 793,500부터</p>
+                                </div>
+                            </a>
+                        </li>        
+                        <li>
+                            <a href="#">
+                                <img src="https://www.koreanair.com/content/dam/koreanair/Global/discountTickets/lax-b.jpg"
+                                    alt="">
+                                <div class="cont-disc discount-disc">
+                                    <h3>서울/인천 ↔ 로스앤젤레스</h3>
+                                    <p>KRW 916,200부터</p>
+                                </div>
+                            </a>
+                        </li>        
+                        <li>
+                            <a href="">
+                                <img src="https://www.koreanair.com/content/dam/koreanair/Global/discountTickets/jfk-b.jpg"
+                                    alt="">
+                                <div class="cont-disc discount-disc">
+                                    <h3>서울/인천 ↔ 뉴욕</h3>
+                                    <p>KRW 1,113,400부터</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>        
+                    <a class="more-view" href="#">특가항공권 전체보기</a>        
+                    <h2 class="a11y-hidden">특가 항공권 주의사항</h2>
+                    <ul class="discount-notice">
+                        <li>상기 금액은 유류할증료 및 세금을 포함한 성인 1인 왕복 운임이며, 구매일과 환율에 따라 달라질 수 있습니다.</li>
+                        <li>일부 해외지역 출발 운임은 유류할증료 대신 항공사 부과금액을 포함하고 있습니다.</li>
+                        <li>상기 운임에 해당하는 예약 클래스에 잔여 좌석이 있을 때만 구매 가능하므로, 선택 날짜에 따라 구매 가능 여부가 달라질 수 있습니다.</li>
+                        <li><em>환불 및 예약 변경에 관련된 규정은 예약 단계 내 상세 운임규정에서 확인하실 수 있습니다.</em></li>
+                    </ul>
+                </section>
             </div>
         </main>
     </div>
