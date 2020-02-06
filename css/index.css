@@ -526,7 +526,7 @@ main {
 .input--select {
   background-image: url(../img/select-arrow-fallback-ln.png);
   background-repeat: no-repeat;
-  background-position: 101% 50%;
+  background-position: 100% 50%;
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
@@ -1059,10 +1059,10 @@ margin-right: 8px;
 
 /* rent a car li size */
 .rentacar-pickup,.rentacar-dropoff {
-    width: 39.8%;
+    width: 42%;
 }
-.rentcar-skypass {
-    width: 10%;
+.rentacar-skypass {
+    width: 13%;
 }
 .rentacar-rental-day,.rentacar-return-day {
     width: 42%;
