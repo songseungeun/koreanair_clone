@@ -22,7 +22,7 @@
             <div class="siteutil clearfix">
                 <div class="region">
                     <h2 class="a11y-hidden">사이트 내 지역 언어 설정</h3>
-                    <button>지역/언어</button>
+                    <button type="button" class="region-sel-btn">지역/언어</button>
                     <div class="region-list">
                         <span class="region-current-country">대한민국</span>
                         <ul>
@@ -39,7 +39,7 @@
                         <li><a href="#" >위시리스트</a></li>
                     </ul>
                     <div class="member-search">
-                        <form action="검색">
+                        <form action="#" method="POST" name="member-search-form" class="member-search-form">
                             <fieldset>
                                 <legend>검색 폼</legend>
                                 <label for="inputSearch" class="a11y-hidden">검색</label>
@@ -53,17 +53,17 @@
             <div class="menu-sec clearfix">
                 <div class="logo">
                         <h1 class="a11y-hidden">대한항공</h1>
-                        <a title="Korean Air" href="#" class="logo-krair"></a>
+                        <a title="Korean Air" href="#" class="logo-koreanair"></a>
                         <a title="스카이팀(새창 열기)" href="#" class="logo-skyteam"></a>
                 </div>
-                <nav class="menu">
+                <nav class="main-menu">
                     <h2 class="a11y-hidden">메인메뉴</h2>
-                    <ul>
+                    <ul class="main-menu-list">
                         <li>
                             <!-- button > h2 으로 바꾸고 -->
                             <!-- <button class="menu-book-btn" type="button">항공권 예매</button> -->
-                            <h2><a href="#" role="button" class="menu-book-btn" type="button">항공권 예매</a></h2>
-                            <div class="menu-book-sub">
+                            <h2 class="submenu-tab"><a href="#" role="button" class="menu-book-btn" type="button">항공권 예매</a></h2>
+                            <div class="menu-book-sub submenu-tabpanel">
                                 <div class="menu-book-ticket">
                                     <!-- h2 > h3 으로 수정 -->
                                     <h3><a class="blue-bold-heading" href="#">항공권 예매</a></h3>
@@ -108,12 +108,12 @@
                                     </ul>
                                 </div>
                                 <!-- 창닫기버튼 -->
-                                <button></button>
+                                <button class="menu-sub-close-btn"></button>
                             </div>
                         </li>
                         <li>
-                            <h2><a href="#" role="button" class="menu-skypass-btn" type="button">스카이 패스</a></h2>
-                            <div class="menu-skypass-sub">
+                            <h2 class="submenu-tab"><a href="#" role="button" class="menu-skypass-btn" type="button">스카이 패스</a></h2>
+                            <div class="menu-skypass-sub submenu-tabpanel">
                                 <div class="menu-skypass-member">
                                     <h3><a class="blue-bold-heading">회원 혜택</a></h3>
                                     <ul>
@@ -158,12 +158,12 @@
                                         <li><a href="#">문화 체험 상품</a></li>
                                     </ul>
                                 </div>
-                                <button></button>
+                                <button class="menu-sub-close-btn"></button>
                             </div>
                         </li>
                         <li>
-                            <h2><a href="#" role="button" class="menu-service-btn" type="button">서비스 안내</a></h2>
-                            <div class="menu-service-sub">
+                            <h2 class="submenu-tab"><a href="#" role="button" class="menu-service-btn" type="button">서비스 안내</a></h2>
+                            <div class="menu-service-sub submenu-tabpanel submenu-act">
                                 <div class="menu-service-boarding">
                                     <h3><a class="blue-bold-heading" href="#">탑승 수속</a></h3>
                                     <ul>
@@ -224,12 +224,12 @@
                                         <li><a href="#">기내 여행 가이드</a></li>
                                     </ul>
                                 </div>
-                                <button></button>
+                                <button class="menu-sub-close-btn"></button>
                             </div>
                         </li>
                         <li>
-                            <h2><a href="#"class="menu-promo-btn" type="button">프로모션/여행상품</a></h2>
-                            <div class="menu-promo-sub">
+                            <h2 class="submenu-tab"><a href="#"class="menu-promo-btn" type="button">프로모션/여행상품</a></h2>
+                            <div class="menu-promo-sub submenu-tabpanel">
                                     <h3><a class="blue-bold-heading menu-promo-event" href="#">이벤트</a></h3>
                                     <h3><a class="blue-bold-heading menu-promo-special" href="#">특가 항공권</a></h3>
                                     <h3><a class="blue-bold-heading menu-promo-boardpass" href="#">엑설런트 보딩패스</a></h3>
@@ -252,7 +252,7 @@
                                         <li><a href="#">여행정보사이트</a></li>
                                     </ul>
                                 </div>
-                                <button></button>
+                                <button class="menu-sub-close-btn"></button>
                             </div>
                         </li>
                     </ul>

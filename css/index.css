@@ -1,16 +1,13 @@
 @charset "utf-8";
 
 /* BASIC */
-a {
-    text-decoration: none;
-    color: inherit;
-}
+
 section .inner {
     max-width: 1172px;
     margin: 0 auto;
 }
 /* header */
-header {
+/* header {
     width: 100%;
     height: 95px;
     background-color: #f4f4f4;
@@ -19,22 +16,24 @@ header {
 .header-top {
     height: 35px;
     background-color: #333;
-}
+} */
 /* ----- HEADER ----- */
 
 /* 헤더 */
 /* 사이트유틸 */
+
+/* 전체적으로 모든 요소에 거의 height 값이 들어있음 빼야함 */
 .siteutil{
   padding: 0 15px;
   background: #434343;
-  /* min-height: 35px; */
+  /* height: 35px; */
   color: white;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 .region{
   float: left;
   /* height: 100%; */
-  color: white;
+  /* color: white; */
   /* line-height: 35px; */
 }
 
@@ -45,7 +44,8 @@ header {
 .region-list ul, .region-list ul li{
   display: inline-block;
 }
-.siteutil button{
+/* 버튼에 클래스주기 */
+.region-sel-btn {
   background: url(https://www.koreanair.com/etc/clientlibs/koreanair/images/btn-regionSelect.png) no-repeat;
   background-position: 90% 50%;
   padding: 10px 25px 10px 0;
@@ -62,16 +62,17 @@ header {
 }
 .lang{
   padding: 7px;
-  display: inline-block;
+  /* display: inline-block; */
 }
 /* member list */
 .member{
   /* height: 35px; */
-  line-height: 35px;
+  /* line-height: 35px; */
   float: right;
 }
 .member ul{
   float: left;
+  line-height: 35px;
 }
 .member ul li{
   display: inline-block;
@@ -92,15 +93,21 @@ header {
 .member-search{
   float: right;
   /* height: 100%; */
+  position: relative;
 }
 .member-search fieldset{
    /* border: 0; */
 }
+/* 전체 line-height빼고 인라인블록을 준 개체에만 line-height 줘서 세로정렬 시키고 */
+/* input은 마진으로 위 아래로 나눠서 여백줌 */
+/* position이 input 이 아니라 상위요소에 있었어야 함 */
 .member-input-search{
   width: 190px;
-  height: 28px;
+  height: 27px;
+  margin: 4px 0;
+  /* padding: ; */
   /* padding: 5px 50px 5px 10px; */
-  position: relative;
+  /* position: relative; */
   /* margin-right: 15px; */
   font-size: 12px;
   padding: .7rem;
@@ -109,103 +116,152 @@ header {
 .member-input-search:focus{
   width: 270px;
 }
+/* form 속성 하나도 안들어있었음 method 같은 값들 input button select 속성 다시 공부 */
+/* 버튼 가운데에 정렬하는거 다시 공부 */
+
 .member-search-btn{
   cursor: pointer;
-  width: 25px;
-  height: 25px;
+  width: 18px;
+  height: 18px;
   position: absolute;
   background: url(https://www.koreanair.com/etc/clientlibs/koreanair/images/icon_n_search.png) no-repeat;
-  top: 8px;
-  right: 15px;
+  top: 50%;
+  margin-top: -10px;
+  right: 6px;
   background-position: 0 0;
   border: 0;
 }
+
+
 /* 메뉴섹션 */
 .menu-sec{ 
-  height: 60px;
-  border-bottom: 1px solid #181818;
+  /* height: 60px; */
+  border-bottom: 1px solid #ccc;
+  padding: 0 15px;
 }
+
+/* 마진 값 딱 떨어지게 깔끔하게 넣는 연습 계산필수 */
 .logo{
   float: left;
-  margin: 12px 0 0 21px;
+  /* margin: 12px 0 0 21px; */
+  margin: 13px 0;
   display: block;
   width: 215px;
   height: 33px;
   position: relative;
   background: url(https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/top-nav-koreanair.png) no-repeat;
 }
-.logo-krair {
+
+/* 로고이미지보다 살짝 넓게 잡아야 클릭범위가 넓어짐 좌표 0 넣어서 잡는 것 공부 */
+.logo-koreanair {
   display: block;
-  top: 5px;
-  right: 45px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  /* right: 45px; */
   position: absolute;
-  width: 170px;
-  height: 30px;
+  width: 180px;
+  /* height: 30px; */
+  /* background-color: rgba(18,129,162,0.5); */
 }
-.koreanair{
+
+/* .koreanair{
   font-size: 1rem;
   margin-left: 20px;
-}
+} */
 .logo-skyteam{
   position: absolute;
-  top: 5px;
-  right:5px;
-  font-size: 2px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  /* font-size: 2px; */
   display: block;
-  height: 30px;
-  width: 25px;
+  /* height: 30px; */
+  width: 32px;
+  /* background-color: rgba(58, 119, 68, 0.5); */
 }
 /* menu 콘텐트 */
-.menu{
-  float:right;
-  height: 60px;
+.main-menu{
+  width: 630px;
+  float: right;
+  height: 38px;
+  padding: 11px 0;
   /* margin:10px 10px 0 0; */
-  padding: 15px 10px 0 0;
+  /* padding: 15px 10px 0 0; */
   position: relative;
 }
-.menu>ul{
- display:flex;
- font-size:18px;
+/* flex만 들어있고 정렬이나 다른값이 하나도 안들어있음 */
+.main-menu-list{
+ display: flex;
+ justify-content: space-between;
+ /* flex-flow: row nowrap; */
+ /* font-size: 18px; */
+ font-size: 1.2rem;
  font-weight: 400;
 }
-.menu ul li button{
+/* button > a로 수정안함 */
+/* .menu ul li button{
   padding: 7px 10px 5px 35px;
   border: none;
   cursor: pointer;
+} */
+.main-menu-list>li{
+  /* background-color: royalblue; */
 }
+
 .menu-book-btn, .menu-skypass-btn, .menu-service-btn, .menu-promo-btn{
-  padding: 0 0 7px 40px;
-  margin-right: 15px;
+  /* padding: 0 0 7px 40px; */
+  /* margin-right: 15px; */
+  box-sizing: border-box;
+  padding: 10px 0 10px 40px;
+  display: block;
+  background-position: 2px 50%;
+  background-repeat: no-repeat;
+}
+.menu-book-btn:hover, .menu-skypass-btn:hover, .menu-service-btn:hover, .menu-promo-btn:hover{
+  background-position: 2px 50%;
+  background-repeat: no-repeat;
 }
 .menu-book-btn{
-  background: url("https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/top-nav-topMenu1.png") no-repeat 0 0;
+  background-image: url("https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/top-nav-topMenu1.png");
 }
 .menu-book-btn:hover{
-  background: url("https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/top-nav-topMenu1-active.png") no-repeat 0 0;
+  background-image: url("https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/top-nav-topMenu1-active.png");
 }
 /* .menu-book-sub{
   position: absolute;
 } */
 .menu-skypass-btn{ 
-  background: url("https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/top-nav-topMenu2.png") no-repeat;
+  background-image: url("https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/top-nav-topMenu2.png");
 }
 .menu-skypass-btn:hover{
-  background: url("https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/top-nav-topMenu2-active.png") no-repeat 0 0;
+  background-image: url("https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/top-nav-topMenu2-active.png");
 }
 .menu-service-btn{
-  background: url("https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/top-nav-topMenu3.png") no-repeat;
+  background-image: url("https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/top-nav-topMenu3.png");
 }
 .menu-service-btn:hover{
-  background: url("https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/top-nav-topMenu3-active.png") no-repeat 0 0;
+  background-image: url("https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/top-nav-topMenu3-active.png");
 }
 .menu-promo-btn{
-  background: url("https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/top-nav-topMenu4.png") no-repeat;
+  background-image: url("https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/top-nav-topMenu4.png");
 }
 .menu-promo-btn:hover{
-  background: url("https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/top-nav-topMenu4-active.png") no-repeat 0 0;
+  background-image: url("https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/top-nav-topMenu4-active.png");
 
 }
+
+
+
+
 /* 서브메뉴 */
+
+/* top 좌표 안 맞는 것 수정 */
+/* 같은 값 쓰는 style끼리 합치기, 사이즈 같은 요소도 합치기 */
+
+.submenu-act {
+  display: flex;
+}
 /* 항공권 예매 메뉴 */
 .menu-book-sub{
   height: 255px;
@@ -221,7 +277,8 @@ header {
   font-weight: 700; 
   border: 1px solid rgb(204,204, 204);
   background: white;
-  display: none;
+  z-index: 99;
+  /* display: none; */
 }
 .blue-bold-heading{
   color:#186686;
@@ -368,7 +425,7 @@ header {
   right: 0px;
   position: absolute;
   background: white;
-  /* display: none; */
+  display: none;
 }
 .menu-promo-sub div{
   width: 25%;
