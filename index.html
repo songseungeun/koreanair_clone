@@ -9,30 +9,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
     <link rel="stylesheet" href="./css/module.css">
     <link rel="stylesheet" href="./css/index.css">
-    <!-- <link rel="stylesheet" href="./test/tab.css"> -->
 
     <script src="./js/jquery.min.js" defer></script>
     <script src="./js/main.js" defer></script>
-    <!-- <script src="./test/main.js" defer></script> -->
 </head>
 <body>
-    <div class="body-container">
+   
         <!-- HEADER -->
         <header>
             <div class="siteutil clearfix">
                 <div class="region">
-                    <h2 class="a11y-hidden">사이트 내 지역 언어 설정</h3>
+                    <h2 class="a11y-hidden">사이트 내 지역 언어 설정</h2>
                     <button type="button" class="region-sel-btn">지역/언어</button>
                     <div class="region-list">
                         <span class="region-current-country">대한민국</span>
-                        <ul>
+                        <ul class="region-lang-list">
                             <li><span class="region-current-lang">한국어</span></li>
                             <li><a href="#" class="lang">English</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="member clearfix">
-                    <ul>
+                    <ul class="member-list">
                         <li><a href="#">로그인</a></li>
                         <li><a href="#">회원가입</a></li>
                         <li><a href="#">나의 예약</a></li>
@@ -44,7 +42,7 @@
                                 <legend>검색 폼</legend>
                                 <label for="inputSearch" class="a11y-hidden">검색</label>
                                 <input name="search" type="text" placeholder="검색" class="member-input-search" id="inputSearch" required >
-                                <button type="submit" class="member-search-btn"></button>
+                                <button type="submit" class="member-search-btn btn-hide">검색</button>
                             </fieldset>
                         </form>
                     </div>
@@ -61,12 +59,9 @@
                     <h2 class="a11y-hidden">메인메뉴</h2>
                     <ul class="main-menu-list">
                         <li>
-                            <!-- button > h2 으로 바꾸고 -->
-                            <!-- <button class="menu-book-btn" type="button">항공권 예매</button> -->
                             <h2 class="submenu-tab"><a href="#" role="button" class="menu-book-btn" type="button">항공권 예매</a></h2>
                             <div class="menu-book-sub submenu-tabpanel">
                                 <div class="menu-book-ticket">
-                                    <!-- h2 > h3 으로 수정 -->
                                     <h3><a class="blue-bold-heading" href="#">항공권 예매</a></h3>
                                     <ul>
                                         <li><a href="#">일반 예매</a></li>
@@ -108,8 +103,7 @@
                                         <li><a href="#">구매 가이드</a></li>
                                     </ul>
                                 </div>
-                                <!-- 창닫기버튼 -->
-                                <button class="menu-sub-close-btn"></button>
+                                <button class="menu-sub-close-btn btn-hide">항공권 예매 메뉴창 닫기</button>
                             </div>
                         </li>
                         <li>
@@ -159,12 +153,12 @@
                                         <li><a href="#">문화 체험 상품</a></li>
                                     </ul>
                                 </div>
-                                <button class="menu-sub-close-btn"></button>
+                                <button class="menu-sub-close-btn btn-hide">스카이 패스 메뉴창 닫기</button>
                             </div>
                         </li>
                         <li>
                             <h2 class="submenu-tab"><a href="#" role="button" class="menu-service-btn" type="button">서비스 안내</a></h2>
-                            <div class="menu-service-sub submenu-tabpanel submenu-act">
+                            <div class="menu-service-sub submenu-tabpanel">
                                 <div class="menu-service-boarding">
                                     <h3><a class="blue-bold-heading" href="#">탑승 수속</a></h3>
                                     <ul>
@@ -176,7 +170,7 @@
                                         <li><a href="#">출입국 규정 조회</a></li>
                                     </ul>
                                 </div>
-                                    <h3><a class="blue-bold-heading menu-service-navi" href="#">항공기 안내</a></h3>
+                                    <h3 class="menu-service-navi"><a class="blue-bold-heading" href="#">항공기 안내</a></h3>
                                 <div class="menu-service-baggage">
                                     <h3><a class="blue-bold-heading" href="#">수하물</a></h3>
                                     <ul>
@@ -188,7 +182,7 @@
                                         <li><a href="#">수하물 준비방법</a></li>
                                     </ul>
                                 </div>
-                                    <h3><a class="blue-bold-heading menu-service-gift" href="#">기내면세품</a></h3>
+                                    <h3 class="menu-service-gift"><a class="blue-bold-heading" href="#">기내면세품</a></h3>
                                 <div class="menu-service-customer">
                                     <h3><a class="blue-bold-heading" href="#">도움이 필요한 고객</a></h3>
                                     <ul>
@@ -200,7 +194,7 @@
                                         <li><a href="#">반려동물과 여행하기</a></li>
                                     </ul>
                                 </div>
-                                    <h3><a class="blue-bold-heading menu-service-coatroom" href="#">코트룸 서비스</a></h3>
+                                    <h3 class="menu-service-coatroom"><a class="blue-bold-heading" href="#">코트룸 서비스</a></h3>
                                 <div class="menu-service-info">
                                     <h3><a class="blue-bold-heading" href="#">공항 및 환승 정보</a></h3>
                                     <ul>
@@ -225,16 +219,16 @@
                                         <li><a href="#">기내 여행 가이드</a></li>
                                     </ul>
                                 </div>
-                                <button class="menu-sub-close-btn"></button>
+                                <button class="menu-sub-close-btn btn-hide">서비스 예매 메뉴창 닫기</button>
                             </div>
                         </li>
                         <li>
                             <h2 class="submenu-tab"><a href="#"class="menu-promo-btn" type="button">프로모션/여행상품</a></h2>
                             <div class="menu-promo-sub submenu-tabpanel">
-                                    <h3><a class="blue-bold-heading menu-promo-event" href="#">이벤트</a></h3>
-                                    <h3><a class="blue-bold-heading menu-promo-special" href="#">특가 항공권</a></h3>
-                                    <h3><a class="blue-bold-heading menu-promo-boardpass" href="#">엑설런트 보딩패스</a></h3>
-                                    <h3><a class="blue-bold-heading menu-promo-program" href="#">엑설런트 트랜짓 프로그램</a></h3>
+                                    <h3 class="menu-promo-event"><a class="blue-bold-heading" href="#">이벤트</a></h3>
+                                    <h3 class="menu-promo-special"><a class="blue-bold-heading" href="#">특가 항공권</a></h3>
+                                    <h3 class="menu-promo-boardpass"><a class="blue-bold-heading" href="#">엑설런트 보딩패스</a></h3>
+                                    <h3 class="menu-promo-program"><a class="blue-bold-heading" href="#">엑설런트 트랜짓 프로그램</a></h3>
                                 <div class="menu-promo-service">
                                     <h3><a class="blue-bold-heading" href="#">전용기 서비스</a></h3>
                                     <ul>
@@ -253,7 +247,7 @@
                                         <li><a href="#">여행정보사이트</a></li>
                                     </ul>
                                 </div>
-                                <button class="menu-sub-close-btn"></button>
+                                <button class="menu-sub-close-btn btn-hide">프로모션/여행상품 메뉴창 닫기</button>
                             </div>
                         </li>
                     </ul>
@@ -316,7 +310,7 @@
                                                     value="one-way-ticket" tabindex="0">
                                                 <label for="one-way-ticket" tabindex="0">편도</label>
                                                 <input type="radio" id="round-trip-ticket" name="flight-ticket"
-                                                    value="one-way-ticket" tabindex="0">
+                                                    value="round-trip-ticket" tabindex="0">
                                                 <label for="round-trip-ticket" tabindex="0">왕복</label>
                                                 <a href="#" class="multi-city">다구간</a>
                                                 <a href="#" class="multi-city-more-info btn-hide" title="다구간 상세설명">다구간 상세설명</a>
@@ -377,7 +371,6 @@
                                                     <option value="airline-ticket-class-first">일등석</option>
                                                 </select>
                                             </li>
-                                            <!-- 션 영역 다시 손보기 -->
                                             <li class="airline-ticket-option">
                                                 <label for="airline-ticket-option-select">추가옵션</label>
                                                 <select name="airline-ticket-option-select" id="airline-ticket-option-select" class="input--select">
@@ -413,7 +406,7 @@
                                             <li>
                                                 <label for="checkin-lastname">승객 성(영문 성 입력)</label>
                                                 <input type="text" id="checkin-lastname" class="input--text"
-                                                    placeholder="국내선 한글 예약의 경우 한글 성 입력" required>
+                                                    placeholder="국내선 한글 예약의 경우 한글 성 입력" required>
                                             </li>
                                             <li>
                                                 <label for="checkin-date">출발일</label>
@@ -428,7 +421,7 @@
                                             <li>
                                                 <label for="checkin-firstname">승객 이름(영문 이름 입력)</label>
                                                 <input type="text" id="checkin-firstname" class="input--text"
-                                                    placeholder="국내선 한글 예약의 경우 한글 이름 입력" required>
+                                                    placeholder="국내선 한글 예약의 경우 한글 이름 입력" required>
                                             </li>
                                             <li class="validation-check-container">
                                                 <input type="checkbox" name="validation-check" id="validation-check">
@@ -464,7 +457,6 @@
                                     <fieldset>
                                         <legend>스케줄조회</legend>
                                         <div class="airline-schedule-trip-type">
-                                            <!--  input radio 에 name 이름이 달라 중복선택 됨 > name 통일해서 하나만 선택되도록 수정 -->
                                             <input type="radio" name="schedule-trip-type" id="schedule-one-way" tabindex="0" value="">
                                             <label for="schedule-one-way" tabindex="0">편도</label>
                                             <input type="radio" name="schedule-trip-type" id="schedule-roundtrip" tabindex="0">
@@ -559,8 +551,7 @@
                         </form>                       
                     </section>
                     <section class="rentacar" role="tabpanel" id="rentacar-tabpanel" aria-labelledby="rentacarTab">
-                        <!-- form 안에 넣었더니 버튼을 클릭할 때 input을 입력하라는 경고창이 떠서 마크업 수정 -->
-                        <div class="location btn-grp clearfix">
+                        <div class="location btn-grp">
                             <h4 class="a11y-hidden">렌터카 지역 선택</h4>
                             <button class="btn btn-on">
                                 전세계
@@ -777,6 +768,92 @@
                 </section>
             </div>
         </main>
-    </div>
+        <footer>
+          <div class="inner">
+            <div class="footer-notice clearfix">
+              <div class="footer-notice-list">
+                <h2>회사소개</h2>
+                <ul>
+                  <li><a href="#">대한항공에대하여</a></li>
+                  <li><a href="#">기업지배구조</a></li>
+                  <li><a href="#">투자정보</a></li>
+                  <li><a href="#">지속가능경영</a></li>
+                  <li><a href="#">뉴스룸 새 창 열기</a></li>
+                  <li><a href="#">공지사항</a></li>
+                </ul>
+              </div>
+              <div class="footer-notice-list">
+                <h2>약관 및 규정</h2>
+                <ul>
+                  <li><a href="#">개인정보 처리방침</a><img title="새창열기" class="rule-img"
+                      src="https://www.koreanair.com/content/dam/koreanair/Global/icons/00_MenuIcons/footer_kisa.png(26 kB)
+  https://www.koreanair.com/content/dam/koreanair/Global/icons/00_MenuIcons/footer_kisa.png
+  "
+                      alt=""></li>
+                  <li><a href="#">회원약관</a></li>
+                  <li><a href="#">운송약관</a></li>
+                  <li><a href="#">소비자 안전 관련 정보 공개</a></li>
+                  <li><a href="#">운임 및 서비스 요금표</a></li>
+                </ul>
+              </div>
+              <div class="footer-notice-list">
+                <h2>기타 안내</h2>
+                <ul>
+                  <li><a href="#">기타 안내 서비스</a></li>
+                  <li><a href="#">항공교통이용자 서비스 계획</a></li>
+                  <li><a href="#">항공교통이용자 피해구제</a></li>
+                  <li><a href="#">관련 사이트</a></li>
+                  <li><a href="#">사이트맵</a></li>
+                </ul>
+              </div>
+              <div class="footer-notice-list">
+                <h2>고객지원</h2>
+                <ul>
+                  <li><a href="#">지점 연락처</a></li>
+                  <li><a href="#">고객의 말씀</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">e 서식함</a></li>
+                  <li><a href="#">채팅 서비스</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="sns-info">
+              <address class="company-information">
+                <span>(주) 대한항공</span>
+                <span aria-hidden="true">|</span>
+                <span>대표이사 : 우기홍 외 1명</span>
+                <span aria-hidden="true">|</span>
+                <span>주소 : 서울특별시 강서구 하늘길 260</span>
+                <span aria-hidden="true">|</span>
+                <span>대표전화 : 1588-2001</span>
+                <span aria-hidden="true">/</span>
+                <span>02-2656-2001</span>
+                <span>사업자 등록번호 : 110-81-14794</span>
+                <span aria-hidden="true">|</span>
+                <span>통신판매업신고 : 강서 제 16-3010</span>
+                <span aria-hidden="true">|</span>
+                <span>개인정보보호책임자 : 여객사업본부장 이진호 전무</span>
+                © 1997-2020 KOREAN AIR</address>
+              <ul class="sns-area">
+                <li>
+                  <a href="#" class="facebook" title="Facebook">페이스북(새창열기)</a>
+                </li>
+                <li>
+                  <a href="#" class="twitter" title="Twitter">트위터(새창열기)</a>
+                </li>
+                <li>
+                  <a href="#" class="instagram" title="Instagram">인스타그램(새창열기)</a>
+                </li>
+                <li>
+                  <a href="#" class="youtube" title="Youtube">유튜브(새창열기)</a>
+                </li>
+                <li>
+                  <a href="#" class="blog-korea" title="blog-korea">대한항공 블로그(새창열기)</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+    
 </body>
 </html>
