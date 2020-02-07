@@ -48,3 +48,34 @@ booking_detail_menu.on('click keyup focus', function(e) {
         $(this).addClass('menu-act');
     }
 });
+
+
+
+
+
+
+// 메뉴리스트 클릭했을때 서브메뉴 나오게하기
+var submenu_tab = $('.submenu-tab');
+var submenu_tabpanel = $('.submenu-tabpanel');
+
+submenu_tab.on('click keyup', function(e) {
+  e.preventDefault();
+
+  if (e.type === 'click' || (e.type === 'keyup' && e.keyCode === 13) || e.type === 'focus') {
+      submenu_tabpanel.removeClass('submenu-act');
+      $(this).closest('.submenu-tab').next().addClass('submenu-act');
+  }
+});
+
+
+// 클로즈 버튼 눌렀을때 서브메뉴 사라지게 하기
+var close_btn = $('.menu-sub-close-btn');
+
+close_btn.on('click keyup', function(e) {
+  e.preventDefault();
+
+  if (e.type === 'click' || (e.type === 'keyup' && e.keyCode === 13) || e.type === 'focus') {
+      // submenu_tabpanel.removeClass('submenu-act');
+      $(this).closest('.submenu-tabpanel').removeClass('submenu-act');
+  }
+});
